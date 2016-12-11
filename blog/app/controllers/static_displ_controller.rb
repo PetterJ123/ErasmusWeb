@@ -1,0 +1,10 @@
+class StaticDisplController < ApplicationController
+  def landing
+      # Empty controller-method
+  end
+
+  def about
+      # Empty controller-method
+  end
+    
+end
