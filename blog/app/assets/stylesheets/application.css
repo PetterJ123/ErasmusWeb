@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+    Here the application's overall style will be written
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
