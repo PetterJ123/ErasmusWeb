@@ -14,4 +14,8 @@ class StaticDisplController < ApplicationController
     def about
         # Empty controller-method
     end
+    
+    def blog
+        # Empty controller-method 
+    end
 end
