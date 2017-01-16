@@ -14,9 +14,11 @@
  *= require_self
  */
 
-/*
-    Here the application's overall style will be written
-*/
+/*Here the application's overall style will be written*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 
 *{
     margin: 0px;
