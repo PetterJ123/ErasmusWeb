@@ -1,2 +1,0 @@
-module StaticDisplHelper
-end
