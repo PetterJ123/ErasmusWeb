@@ -1,9 +1,16 @@
 source 'https://rubygems.org'
 
+# Custom gems added
+
+# Admin dashboard for website
 gem 'rails_admin', '~> 1.0'
-gem 'cancancan'
+
+# Bootstrap related
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+
+# Authentication to authenticate users for the website
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'

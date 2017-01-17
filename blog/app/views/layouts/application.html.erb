@@ -19,6 +19,14 @@
   </head>
 
   <body>
+    <!-- Devise code for configuration and setup -->
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      
     <%= yield %>
   </body>
 </html>

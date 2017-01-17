@@ -17,5 +17,6 @@ class StaticDisplController < ApplicationController
     
     def blog
         # Empty controller-method 
+        @contrller_message = "Hello from Controller"
     end
 end
