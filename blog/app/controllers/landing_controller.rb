@@ -14,8 +14,4 @@ class LandingController < ApplicationController
     def countries
         # Controller method for "Countries"
     end
-    
-    def blog
-        # Controller method for "Blog"
-    end
 end
