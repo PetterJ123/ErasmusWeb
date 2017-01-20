@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
     get 'landing/index'
     root 'landing#index'
 
     get 'landing/about'
     get 'landing/countries'
     get 'landing/projects'
-    
     
     resources :posts
     mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
