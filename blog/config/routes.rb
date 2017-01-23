@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-    get 'landing/index'
-    root 'landing#index'
-
-    get 'landing/about'
-    get 'landing/countries'
-    get 'landing/projects'
-    
-    resources :posts
-    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
-
+  resources :posts
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    
+    get 'posts/index'
+    root 'posts#index'
+    
 end
