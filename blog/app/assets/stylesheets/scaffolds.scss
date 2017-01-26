@@ -4,7 +4,70 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
+}
+
+#meny {
+  background-image: url('/assets/meny.png');
+  height: 850px;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #FFFFFF;
+} 
+
+#logo {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+#meny a {
+  color: #FFFFFF;
+
+  &:visited {
+    color: #FFFFFF;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: #848170;
+  }
+}
+
+article {
+  float: left;
+  margin-left: 300px;
+}
+
+header {
+  background-color: #e4f5b1;
+  color: #FFFFFF;
+  height: 200px;
+}
+
+#infofield {
+  border-bottom: solid #848170 2px;
+  height: 50px;
+
+}
+
+.page {
+  float: left;
+}
+
+.search {
+  float: right;
+}
+
+#main{
+  margin-top: 50px;
+}
+
+footer {
+  background-color: #848170;
+  color: #FFFFFF;
+  height: 200px;
+  margin-top: 100px;
 }
 
 p, ol, ul, td {

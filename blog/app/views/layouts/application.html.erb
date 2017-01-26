@@ -15,6 +15,7 @@
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -24,5 +25,19 @@
         <%= link_to "Sign Up", new_user_registration_path %>
         <%= link_to "Sign In", new_user_session_path %>
         <%= yield %>
-    </body>
-</html>
+
+        <!-- Navigation menu -->
+        <div id="meny">
+            <img src="/assets/logga.png" id="logo">
+            <nav>
+                <ul class="nav">
+                    <li>"Home"</li>
+                    <li>"About"</li>
+                    <li>"Projects"</li>
+                    <li>"Countries"</li>
+                    <li>"Blog"</li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- The rest of the unique page information is transferred to it's file, also the ending of this page-->
