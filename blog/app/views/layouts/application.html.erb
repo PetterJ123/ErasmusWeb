@@ -28,14 +28,13 @@
 
         <!-- Navigation menu -->
         <div id="meny">
-            <img src="/assets/logga.png" id="logo">
+            <img src="/assets/logga.png" id="logo"/>
             <nav>
                 <ul class="nav">
-                    <li>"Home"</li>
-                    <li>"About"</li>
-                    <li>"Projects"</li>
-                    <li>"Countries"</li>
-                    <li>"Blog"</li>
+                    <li><%= link_to "Home", root_path %></li>
+                    <li><%= link_to "Countries", menu_countries_path %></li>
+                    <li><%= link_to "About", menu_about_path %></li>
+                    <li><%= link_to "ERASMUS Social",  posts_path %></li>
                 </ul>
             </nav>
         </div>
