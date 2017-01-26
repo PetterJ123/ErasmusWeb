@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170123193617) do
 
-  create_table "articles", force: :cascade do |t|
-    t.string   "content"
-    t.string   "header"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string   "head"
     t.string   "content"
