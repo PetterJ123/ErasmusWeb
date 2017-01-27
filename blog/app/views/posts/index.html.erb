@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
 
+<div class="container" id="tableCont">
 <table>
+    <h1>Posts</h1>
     <thead>
         <tr>
             <th>Head</th>
@@ -28,7 +29,5 @@
         <% end %>
     </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+    <%= link_to 'New Post', new_post_path %>
+</div>
