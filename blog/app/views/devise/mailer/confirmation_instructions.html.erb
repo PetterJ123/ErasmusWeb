@@ -1,5 +1,35 @@
-<p>Welcome <%= @email %>!</p>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+            	<h1>HEADER</h1>
+            </header>
+        </div>
 
-<p>You can confirm your account email through the link below:</p>
+        <div class="row" id="infofield">
+	        <nav id="infonav">
+	        	<h3 class="page">You are on the confirm email-page</h3>
+	        	<div class="search"><img src="/assets/searchicon.png"></div>
+	        	<div class="search"><h3>Search</h3></div>
+	        </nav>	
+	    </div>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+	    <div class="row" id="main">
+	    	<p>Welcome <%= @email %>!</p>
+
+			<p>You can confirm your account email through the link below:</p>
+
+			<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+	    </div>
+	        
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>

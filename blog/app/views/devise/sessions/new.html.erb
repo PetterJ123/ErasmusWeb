@@ -1,26 +1,54 @@
-<h2>Log in</h2>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+              <h1>HEADER</h1>
+            </header>
+        </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+        <div class="row" id="infofield">
+          <nav id="infonav">
+            <h3 class="page">You are on the log in-page</h3>
+            <div class="search"><img src="/assets/searchicon.png"></div>
+            <div class="search"><h3>Search</h3></div>
+          </nav>  
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="row" id="main">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+          <% if devise_mapping.rememberable? -%>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
 
-<%= render "devise/shared/links" %>
+          <div class="actions">
+            <%= f.submit "Log in" %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+          
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>

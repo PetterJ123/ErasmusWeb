@@ -1,25 +1,53 @@
-<h2>Change your password</h2>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+              <h1>HEADER</h1>
+            </header>
+        </div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+        <div class="row" id="infofield">
+          <nav id="infonav">
+            <h3 class="page">You are on the change password-page</h3>
+            <div class="search"><img src="/assets/searchicon.png"></div>
+            <div class="search"><h3>Search</h3></div>
+          </nav>  
+      </div>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
-  </div>
+      <div class="row" id="main">
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+          <%= devise_error_messages! %>
+          <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+          <div class="field">
+            <%= f.label :password, "New password" %><br />
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+            <% end %>
+            <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Change my password" %>
-  </div>
-<% end %>
+          <div class="field">
+            <%= f.label :password_confirmation, "Confirm new password" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
 
-<%= render "devise/shared/links" %>
+          <div class="actions">
+            <%= f.submit "Change my password" %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+          
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>

@@ -1,14 +1,44 @@
-<p id="notice"><%= notice %></p>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+            	<h1>HEADER</h1>
+            </header>
+        </div>
 
-<p>
-  <strong>Head:</strong>
-  <%= @post.head %>
-</p>
+        <div class="row" id="infofield">
+	        <nav id="infonav">
+	        	<h3 class="page">You are on the show post-page</h3>
+	        	<div class="search"><img src="/assets/searchicon.png"></div>
+	        	<div class="search"><h3>Search</h3></div>
+	        </nav>	
+	    </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+	    <div class="row" id="main">
+	    	<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+			<p>
+			  <strong>Head:</strong>
+			  <%= @post.head %>
+			</p>
+
+			<p>
+			  <strong>Content:</strong>
+			  <%= @post.content %>
+			</p>
+
+			<%= link_to 'Edit', edit_post_path(@post) %> |
+			<%= link_to 'Back', posts_path %>
+	    </div>
+	        
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>

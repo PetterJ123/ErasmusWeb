@@ -1,6 +1,36 @@
-<h1>Editing Post</h1>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+            	<h1>HEADER</h1>
+            </header>
+        </div>
 
-<%= render 'form', post: @post %>
+        <div class="row" id="infofield">
+	        <nav id="infonav">
+	        	<h3 class="page">You are on the edit post-page</h3>
+	        	<div class="search"><img src="/assets/searchicon.png"></div>
+	        	<div class="search"><h3>Search</h3></div>
+	        </nav>	
+	    </div>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+	    <div class="row" id="main">
+	    	<h1>Editing Post</h1>
+
+			<%= render 'form', post: @post %>
+
+			<%= link_to 'Show', @post %> |
+			<%= link_to 'Back', posts_path %>
+	    </div>
+	        
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>
