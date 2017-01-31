@@ -1,15 +1,9 @@
-#noteCont{
-
-}
-
 #log{
     position: absolute;
     z-index: 3;
     background-color: crimson;
     right: 0px;
 }
-
-
 
 body {
     background-color: #fff;
@@ -112,6 +106,7 @@ footer {
     background-color: #e4f5b1;
     color: #FFFFFF;
     height: 200px;
+    width: 100%;
 }
 
 p, ol, ul, td {

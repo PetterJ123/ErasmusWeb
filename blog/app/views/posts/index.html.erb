@@ -22,9 +22,9 @@
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="3" class="tbHead" style="border: 1px solid crimson;">Head</th>
-                            <th colspan="3" class="tbHead">User</th>
-                            <th colspan="3" class="tbHead">Content</th>
+                            <th class="tbHead">Head</th>
+                            <th class="tbHead">Content</th>
+                            <th class="tbHead">User</th>
                         </tr>
                     </thead>
 
@@ -37,8 +37,8 @@
                             <td><%= link_to 'Show', post %></td>
 
                             <% if post.user == current_user %>
-                            <td><%= link_to 'Edit', edit_post_path(post) %></td>
-                            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                             <% end %>
                         </tr>
                         <% end %>
