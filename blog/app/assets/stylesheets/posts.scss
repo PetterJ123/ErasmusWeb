@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table{}
-
 #tableCont{
-    margin-left: 200px;
-    background-color: green;
+    border: 1px solid crimson;
+}
+
+#tbHead{
+    margin-left: 20px;
 }
