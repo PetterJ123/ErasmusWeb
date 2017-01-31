@@ -6,11 +6,13 @@
             </header>
         </div>
 
-         <div class="row" id="infofield">
+        <div class="row" id="infofield">
             <nav id="infonav">
                 <h3 class="page">You are on the posts-page</h3>
-                <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
-                <h3 id="search">Search</h3></div>
+                <div id="searchfield">
+                    <img id="searchicon" src="/assets/searchicon.png">
+                    <h3 id="search">Search</h3>
+                </div>
             </nav>  
         </div>
 
@@ -45,12 +47,6 @@
                 <%= link_to 'New Post', new_post_path %>
             </div>
         </div>
-
-        <div class="row">
-            <!-- Footer -->
-            <footer>
-                <h1>FOOTER</h1>
-            </footer>      
-        </div>      
+        <%= render "partials/footer" %>
     </div> 
 </article>
