@@ -1,7 +1,37 @@
-<p>Hello <%= @resource.email %>!</p>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+            	<h1>HEADER</h1>
+            </header>
+        </div>
 
-<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+        <div class="row" id="infofield">
+	        <nav id="infonav">
+	        	<h3 class="page">You are on the locked account-page</h3>
+	        	<div class="search"><img src="/assets/searchicon.png"></div>
+	        	<div class="search"><h3>Search</h3></div>
+	        </nav>	
+	    </div>
 
-<p>Click the link below to unlock your account:</p>
+	    <div class="row" id="main">
+	    	<p>Hello <%= @resource.email %>!</p>
 
-<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+			<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+
+			<p>Click the link below to unlock your account:</p>
+
+			<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+	    </div>
+	        
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>

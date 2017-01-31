@@ -1,16 +1,44 @@
-<h2>Resend confirmation instructions</h2>
+<article>
+    <div class="container">
+        <div class="row">
+            <header>
+            	<h1>HEADER</h1>
+            </header>
+        </div>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+        <div class="row" id="infofield">
+	        <nav id="infonav">
+	        	<h3 class="page">You are on the Resend confirmation instructions-page</h3>
+	        	<div class="search"><img src="/assets/searchicon.png"></div>
+	        	<div class="search"><h3>Search</h3></div>
+	        </nav>	
+	    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
+	    <div class="row" id="main">
+			<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+			  <%= devise_error_messages! %>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+			  <div class="field">
+			    <%= f.label :email %><br />
+			    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+			  </div>
 
-<%= render "devise/shared/links" %>
+			  <div class="actions">
+			    <%= f.submit "Resend confirmation instructions" %>
+			  </div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+	    </div>
+	        
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <h1>FOOTER</h1>
+            </footer>      
+        </div>      
+    </div> 
+</article>
+        
+</body>
+</html>
