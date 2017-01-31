@@ -34,6 +34,12 @@ body {
   }
 }
 
+#signupinout {
+  position: absolute;
+  bottom: 100px;
+  left: 100px
+}
+
 article {
   float: left;
   margin-left: 300px;
@@ -43,31 +49,56 @@ header {
   background-color: #e4f5b1;
   color: #FFFFFF;
   height: 200px;
+  width: 1170px;
+  position: absolute;
+  top: 0;
+}
+
+#headerrow {
+  height: 200px;
 }
 
 #infofield {
   border-bottom: solid #848170 2px;
   height: 50px;
+}
 
+#infonav {
+  padding: 10px 25px 10px 25px;
+  height: 50px;
 }
 
 .page {
   float: left;
+  margin: 0;
 }
 
-.search {
+#searchfield {
   float: right;
+  margin: 0;
+  height: 26px;
+  width: 100px
+}
+
+#searchicon {
+  float: right;
+  width: 30px;
+}
+
+#search {
+  float: left;
+  margin: 0;
 }
 
 #main{
-  margin-top: 50px;
+  margin: 50px;
+  min-height: 280px;
 }
 
 footer {
   background-color: #848170;
   color: #FFFFFF;
   height: 200px;
-  margin-top: 100px;
 }
 
 p, ol, ul, td {
@@ -114,6 +145,20 @@ div {
 
 #notice {
   color: green;
+}
+
+.notice {
+  position: fixed;
+  top: 0;
+  left: 300px;
+  width: 100%;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 300px;
+  width: 100%;
 }
 
 .field_with_errors {

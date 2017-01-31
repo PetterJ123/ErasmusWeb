@@ -22,8 +22,6 @@
     <body>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-        <%= link_to "Sign Up", new_user_registration_path %>
-        <%= link_to "Sign In", new_user_session_path %>
         <%= yield %>
 
         <!-- Navigation menu -->
@@ -36,7 +34,11 @@
                     <li><%= link_to "About", menu_about_path %></li>
                     <li><%= link_to "ERASMUS Social",  posts_path %></li>
                 </ul>
+                <div id="signupinout">
+                    <%= link_to "Sign Up", new_user_registration_path %>
+                    <%= link_to "Sign In", new_user_session_path %>       
+                </div>
             </nav>
-        </div>-->
+        </div>
 
         <!-- The rest of the unique page information is transferred to it's file, also the ending of this page-->
