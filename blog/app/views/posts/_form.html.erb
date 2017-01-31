@@ -1,57 +1,27 @@
-<article>
-    <div class="container">
-        <div class="row">
-            <header>
-              <h1>HEADER</h1>
-            </header>
-        </div>
+<%= form_for(post) do |f| %>
+<% if post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-        <div class="row" id="infofield">
-          <nav id="infonav">
-            <h3 class="page">You are on the ??-page</h3>
-            <div class="search"><img src="/assets/searchicon.png"></div>
-            <div class="search"><h3>Search</h3></div>
-          </nav>  
-      </div>
+    <ul>
+    <% post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
-      <div class="row" id="main">
-        <%= form_for(post) do |f| %>
-        <% if post.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="field">
+  <%= f.label :head %>
+  <%= f.text_field :head %>
+</div>
 
-            <ul>
-            <% post.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
+<div class="field">
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+</div>
 
-        <div class="field">
-          <%= f.label :head %>
-          <%= f.text_field :head %>
-        </div>
-
-        <div class="field">
-          <%= f.label :content %>
-          <%= f.text_field :content %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
-      </div>
-          
-        <div class="row">
-            <!-- Footer -->
-            <footer>
-                <h1>FOOTER</h1>
-            </footer>      
-        </div>      
-    </div> 
-</article>
-        
-</body>
-</html>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
