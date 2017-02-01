@@ -1,11 +1,6 @@
 <article>
     <div class="container">
-        <div class="row" id="headerrow">
-            <header>
-                <h1>HEADER</h1>
-            </header>
-        </div>
-
+        <%= render "partials/header" %>
         <div class="row" id="infofield">
             <nav id="infonav">
                 <h3 class="page">You are on the posts-page</h3>
@@ -22,9 +17,9 @@
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="3" class="tbHead" style="border: 1px solid crimson;">Head</th>
-                            <th colspan="3" class="tbHead">User</th>
-                            <th colspan="3" class="tbHead">Content</th>
+                            <th class="tbHead">Head</th>
+                            <th class="tbHead">Content</th>
+                            <th class="tbHead">User</th>
                         </tr>
                     </thead>
 

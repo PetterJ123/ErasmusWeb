@@ -1,11 +1,6 @@
 <article>
     <div class="container">
-        <div class="row" id="headerrow">
-            <header>
-              <h1>HEADER</h1>
-            </header>
-        </div>
-
+        <%= render "partials/header" %>
         <div class="row" id="infofield">
           <nav id="infonav">
             <h3 class="page">You are on the Edit <%= resource_name.to_s.humanize %>-page</h3>

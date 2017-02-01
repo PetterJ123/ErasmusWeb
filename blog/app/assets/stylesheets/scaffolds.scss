@@ -17,6 +17,8 @@ body {
     line-height: 18px;
 }
 
+/*---------CSS for the menu------------*/
+
 #meny {
     background-image: url('/assets/meny.png');
     height: 100%;
@@ -109,6 +111,7 @@ footer {
     background-color: rgb(132,161,81); /* Predecessor: #e4f5b1;*/
     color: #FFFFFF;
     height: 200px;
+    width: 100%;
 }
 
 p, ol, ul, td {
