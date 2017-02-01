@@ -1,11 +1,6 @@
 <article>
     <div class="container">
-        <div class="row" id="headerrow">
-            <header>
-                <h1>HEADER</h1>
-            </header>
-        </div>
-
+        <%= render "partials/header" %>
         <div class="row" id="infofield">
             <nav id="infonav">
                 <h3 class="page">You are on the posts-page</h3>
@@ -37,8 +32,8 @@
                             <td><%= link_to 'Show', post %></td>
 
                             <% if post.user == current_user %>
-                                <td><%= link_to 'Edit', edit_post_path(post) %></td>
-                                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                             <% end %>
                         </tr>
                         <% end %>
