@@ -6,15 +6,20 @@ body {
   line-height: 18px;
 }
 
+article {
+  width: 80%;
+}
+
 #meny {
   background-image: url('/assets/meny.png');
   height: 850px;
   width: 300px;
-  position: fixed;
-  top: 0;
-  left: 0;
   color: #FFFFFF;
+  float: left;
 } 
+.container {
+  float: right;
+}
 
 #logo {
   margin-left: 25px;
@@ -40,21 +45,9 @@ body {
   left: 100px
 }
 
-article {
-  float: left;
-  margin-left: 300px;
-}
-
 header {
   background-color: #e4f5b1;
   color: #FFFFFF;
-  height: 200px;
-  width: 1170px;
-  position: absolute;
-  top: 0;
-}
-
-#headerrow {
   height: 200px;
 }
 
