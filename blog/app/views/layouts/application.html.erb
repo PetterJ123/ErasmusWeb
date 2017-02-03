@@ -24,16 +24,6 @@
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
         </div>
-        <!-- Wil "ask" user to log in/authenticate and if already authenticated it will display current user and a log out button -->
-        <div id="log">
-            <% if user_signed_in? %>
-            <p>Sign out</p>
-            <p><%= current_user.email %></p>
-            <% else %>
-            <%= link_to "Sign Up", new_user_registration_path %>
-            <%= link_to "Sign In", new_user_session_path %>
-            <% end %>
-        </div>
         <%= yield %>
 
         <!-- Navigation menu -->
@@ -46,10 +36,17 @@
                     <li><%= link_to "About", menu_about_path %></li>
                     <li><%= link_to "ERASMUS Social",  posts_path %></li>
                 </ul>
-                <div id="signupinout">
+
+              <!-- Wil "ask" user to log in/authenticate and if already authenticated it will display current user and a log out button -->
+              <div id="signupinout">
+                <% if user_signed_in? %>
+                    <p>Sign out</p>
+                    <p><%= current_user.email %></p>
+                <% else %>
                     <%= link_to "Sign Up", new_user_registration_path %>
-                    <%= link_to "Sign In", new_user_session_path %>       
-                </div>
+                    <%= link_to "Sign In", new_user_session_path %>
+                <% end %>
+              </div>
             </nav>
         </div>
 
