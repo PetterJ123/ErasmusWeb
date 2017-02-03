@@ -64,7 +64,7 @@ class PostsController < ApplicationController
     
     private
         def set_post
-            unless @post = Post.where(id: params[:post_id]).first
+            unless @post == Post.where(id: params[:post_id]).first
                 redirect_to posts_path flash: {alert: "Post doesn't exsist"}
             end
         end
