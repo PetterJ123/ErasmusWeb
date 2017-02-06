@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     # GET /posts/1
     # GET /posts/1.json
     def show
+        @post = Post.find(params[:id])
     end
     
     # GET /posts/1/edit
@@ -61,7 +62,7 @@ class PostsController < ApplicationController
             format.json { head :no_content }
         end
     end
-    
+
     private
         def set_post
             unless @post == Post.where(id: params[:post_id]).first
