@@ -11,12 +11,16 @@ class PostsController < ApplicationController
     # GET /posts/1
     # GET /posts/1.json
     def show
-        @post = Post.find(params[:id])
+        declare_parms
+        # Got replaced by the method above, to use the DRY-method of developing
+        #@post = Post.find(params[:id])
     end
     
     # GET /posts/1/edit
     def edit
-        @post = Post.find(params[:id])
+        declare_parms
+        # Got replaced by the method above, to use the DRY-method of developing
+        #@post = Post.find(params[:id])
     end
 
     # GET /posts/new
@@ -74,5 +78,10 @@ class PostsController < ApplicationController
 
         def post_params
             params.require(:post).permit(:head, :content)
+        end
+
+        # Private method just for calling it when needed instead of rewriting. DRY
+        def declare_parms
+            @post = Post.find(params[:id])
         end
     end
