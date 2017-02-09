@@ -1,17 +1,21 @@
-<article>
-    <div class="container">
-        <div class="row" id="headerrow">
-            <header>
-              <h1>HEADER</h1>
-            </header>
-        </div>
+  <%= render "partials/meny" %>
+<article class="col-md-10 col-lg-10"> 
+     <%= render "partials/header" %> 
 
-        <div class="row" id="infofield">
-          <nav id="infonav">
-            <h3 class="page">You are on the Edit <%= resource_name.to_s.humanize %>-page</h3>
-            <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
-            <h3 id="search">Search</h3></div>
-          </nav>  
+      <div class="row" id="infofield">
+        <nav id="xl-infonav" class="hidden-xs hidden-sm">
+          <h3 class="page">Edit <%= resource_name.to_s.humanize %></h3>
+          <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
+          <h3 id="search">Search</h3></div>
+        </nav>
+          
+        <nav id="xs-infonav" class="hidden-md hidden-lg">
+          <img id="burgermeny" src="" alt="≡">
+          <h3 class="page">Edit <%= resource_name.to_s.humanize %></h3>
+
+          <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
+          <h3 id="search">Search</h3></div>
+        </nav>
       </div>
 
       <div class="row" id="main">
@@ -57,15 +61,6 @@
 
         <%= link_to "Back", :back %>
       </div>
-          
-        <div class="row">
-            <!-- Footer -->
-            <footer>
-                <h1>FOOTER</h1>
-            </footer>      
-        </div>      
+      <%= render "/partials/footer" %>
     </div> 
 </article>
-        
-</body>
-</html>

@@ -20,27 +20,21 @@
     </head>
 
     <body>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= yield %>
-
-        <article>
-
-        <!-- Navigation menu -->
-        <div id="meny" class="hidden-xs hidden-sm">
-            <img src="/assets/logga.png" id="logo"/>
-            <nav>
-                <ul class="nav">
-                    <li><%= link_to "Home", root_path %></li>
-                    <li><%= link_to "Countries", menu_countries_path %></li>
-                    <li><%= link_to "About", menu_about_path %></li>
-                    <li><%= link_to "ERASMUS Social",  posts_path %></li>
-                </ul>
-                <div id="signupinout">
-                    <%= link_to "Sign Up", new_user_registration_path %>
-                    <%= link_to "Sign In", new_user_session_path %>       
-                </div>
-            </nav>
+        <div class="noteCont">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
         </div>
 
+        <!-- Wil "ask" user to log in/authenticate and if already authenticated it will display current user and a log out button -->
+        <div id="signupinout">
+            <% if user_signed_in? %>
+            <p>Sign out</p>
+            <p><%= current_user.email %></p>
+            <% else %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+            <%= link_to "Sign In", new_user_session_path %>
+            <% end %>
+        </div>
+        <%= yield %>
+             
         <!-- The rest of the unique page information is transferred to it's file, also the ending of this page-->

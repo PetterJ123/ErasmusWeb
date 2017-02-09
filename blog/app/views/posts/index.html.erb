@@ -1,62 +1,54 @@
-<article>
-    <div class="container">
-        <div class="row" id="headerrow">
-            <header>
-                <h1>HEADER</h1>
-            </header>
-        </div>
+<%= render "partials/meny" %>
+<article class="col-md-10 col-lg-10"> 
+     <%= render "partials/header" %> 
 
-         <div class="row" id="infofield">
-            <nav id="infonav">
-                <h3 class="page">You are on the posts-page</h3>
-                <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
-                <h3 id="search">Search</h3></div>
-            </nav>  
-        </div>
+      <div class="row" id="infofield">
+        <nav id="xl-infonav" class="hidden-xs hidden-sm">
+            <h3 class="page">Posts</h3>
+            <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
+            <h3 id="search">Search</h3></div>
+        </nav>
+          
+        <nav id="xs-infonav" class="hidden-md hidden-lg">
+          <img id="burgermeny" src="" alt="≡">
+          <h3 class="page">Posts</h3>
+
+          <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
+          <h3 id="search">Search</h3></div>
+        </nav>
+      </div>
 
         <div class="row" id="main">
-            <p id="notice"><%= notice %></p>
-
-
+            <!--<p id="notice"><#%= notice %></p>-->
             <div class="container" id="tableCont">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Head</th>
-                        <th>Content</th>
-                        <th>User</th>
-                        <th colspan="3"></th>
-                    </tr>
-                </thead>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="tbHead">Head</th>
+                            <th class="tbHead">Content</th>
+                            <th class="tbHead">User</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <% @posts.each do |post| %>
-                    <tr>
-                        <td><%= post.head %></td>
-                        <td><%= post.content %></td>
-                        <td><%= post.user.email %></td>
-                        <td><%= link_to 'Show', post %></td>
+                    <tbody>
+                        <% @posts.each do |post| %>
+                        <tr>
+                            <td><%= post.head %></td>
+                            <td><%= post.content %></td>
+                            <td><%= post.user.email %></td>
+                            <td><%= link_to 'Show', post %></td>
 
-                        <% if post.user == current_user %>
+                            <% if post.user == current_user %>
                             <td><%= link_to 'Edit', edit_post_path(post) %></td>
                             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                            <% end %>
+                        </tr>
                         <% end %>
-                    </tr>
-                    <% end %>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
                 <%= link_to 'New Post', new_post_path %>
             </div>
         </div>
-            
-        <div class="row">
-            <!-- Footer -->
-            <footer>
-                <h1>FOOTER</h1>
-            </footer>      
-        </div>      
+        <%= render "partials/footer" %>
     </div> 
 </article>
-        
-</body>
-</html>
