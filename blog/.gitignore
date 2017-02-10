@@ -23,4 +23,5 @@
 # Ignore rubymine xml-files, comes maninly from petter
 ../.idea/*.xml
 
-../.idea
+# Ignore Rubymine settings file
+../.idea/
