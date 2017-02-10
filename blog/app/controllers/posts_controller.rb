@@ -12,10 +12,16 @@ class PostsController < ApplicationController
     # GET /posts/1
     # GET /posts/1.json
     def show
+        declare_parms
+        # Got replaced by the method above, to use the DRY-method of developing
+        #@post = Post.find(params[:id])
     end
     
     # GET /posts/1/edit
     def edit
+        declare_parms
+        # Got replaced by the method above, to use the DRY-method of developing
+        #@post = Post.find(params[:id])
     end
 
     # GET /posts/new
@@ -56,13 +62,14 @@ class PostsController < ApplicationController
     # DELETE /posts/1
     # DELETE /posts/1.json
     def destroy
+        @post = Post.find(params[:id])
         @post.destroy
         respond_to do |format|
             format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
             format.json { head :no_content }
         end
     end
-    
+
     private
         def set_post
             unless @post == Post.where(id: params[:post_id]).first
@@ -72,5 +79,10 @@ class PostsController < ApplicationController
 
         def post_params
             params.require(:post).permit(:head, :content)
+        end
+
+        # Private method just for calling it when needed instead of rewriting. DRY
+        def declare_parms
+            @post = Post.find(params[:id])
         end
     end

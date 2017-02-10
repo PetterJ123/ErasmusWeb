@@ -11,6 +11,9 @@ gem 'autoprefixer-rails'
 # Authentication to authenticate users for the website
 gem 'devise', '~> 4.2'
 
+# Adminpanel that only assigned admins can access
+gem 'rails_admin', '~> 1.0'
+
 #=====================================================
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
