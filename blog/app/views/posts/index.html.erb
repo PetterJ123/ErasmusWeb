@@ -37,7 +37,7 @@
                         <tr>
                             <td><%= post.head %></td>
                             <td><%= post.content %></td>
-                            <td><%= post.user.email %></td>
+                            <td>#%= post.user.email %></td>
                             <td><%= link_to 'Show', post %></td>
 
                             <% if post.user == current_user %>
