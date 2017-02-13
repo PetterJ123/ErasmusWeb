@@ -4,38 +4,47 @@
 
 
 body {
-    background-color: #fff;
+    background-color: #84A151 !important;
     color: #333;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
     line-height: 18px;
 }
 
-article {
-  float: left;
-  border-collapse: collapse;
-  width: 100%;
-  margin-left: 0;
-}
-
 /*---------CSS for the menu------------*/
 aside {
-  background-color: #84A151;
-  height: 850px;
   color: #FFFFFF;
 }
 
 #logo {
-  width: 90%;
-  margin: 5%;
+  position: fixed;
+  top: 1%;
+  left: 1.7%;
 }
 
 .nav {
-  margin: 5%;
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  top: 30%;
+  left: 2%;
+}
+
+aside li {
+  width: 100%;
+  min-height: 1.5em;
+  margin-bottom: 5px;
+}
+
+.icons {
+  float: left;
+  margin-right: 5px;
 }
 
 aside a {
     color: #FFFFFF;
+    float: left;
+    padding: 0 !important;
 
     &:visited {
         color: #FFFFFF;
@@ -47,8 +56,47 @@ aside a {
     }
 }
 
-#signupinout {
+#signupinout #signup a{
+  z-index: 10;
+  color: #FFFFFF;
+  position: fixed;
+  left: 3%;
+  bottom: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
 
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+#signupinout #signin a{
+  z-index: 10;
+  color: #FFFFFF;
+  position: fixed;
+  left: 9%;
+  bottom: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+
+article {
+  background-color: #FFFFFF;
+  float: left;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 0;
 }
 
 header {
@@ -100,7 +148,7 @@ header {
 
 #main{
     padding: 50px 10% 50px 10%;
-    min-height: 500px;
+    min-height: 57.5em;
 }
 
 footer {
@@ -209,6 +257,9 @@ label {
   .nav > li {
     font-size: 1.5em;
   }
+  #signupinout > #signup > a, #signupinout > #signin > a {
+    font-size: 1em;
+  }
   header, footer {
     height: 200px;
   }
@@ -227,7 +278,7 @@ label {
 }
 
 @media only screen and (min-width:1451px) and (max-width: 1700px) {
-  .nav > li {
+  .nav > li, #signupinout > #signup > a,#signupinout > #signin > a {
     font-size: 1.7em;
   } 
   header, footer {
@@ -248,7 +299,7 @@ label {
 }
 
 @media only screen and (min-width:1701px) {
-  .nav > li {
+  .nav > li, #signupinout > #signup > a, #signupinout > #signin > a{
     font-size: 2em;
   }
   header, footer {

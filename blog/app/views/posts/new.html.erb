@@ -1,6 +1,5 @@
 <%= render "partials/meny" %>
 <article class="col-md-10 col-lg-10"> 
-     <%= render "partials/header" %> 
 
       <div class="row" id="infofield">
         <nav id="xl-infonav" class="hidden-xs hidden-sm">
@@ -13,8 +12,11 @@
           <img id="burgermeny" src="" alt="≡">
           <h3 class="page">Create post</h3>
 
-          <div id="searchfield"><img id="searchicon" src="/assets/searchicon.png">
-          <h3 id="search">Search</h3></div>
+          <div id="searchfield">
+            <img id="searchicon" src="/assets/searchicon.png" class="hidden-xs hidden-sm">
+            <img id="searchicon" src="/assets/searchiconxs.png" class="hidden-md hidden-lg">
+            <h3 id="search">Search</h3>
+          </div>
         </nav>
       </div>
 
