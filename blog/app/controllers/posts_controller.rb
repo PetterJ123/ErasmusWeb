@@ -14,14 +14,14 @@ class PostsController < ApplicationController
     def show
         declare_parms
         # Got replaced by the method above, to use the DRY-method of developing
-        #@post = Post.find(params[:id])
+        # @post = Post.find(params[:id])
     end
     
     # GET /posts/1/edit
     def edit
         declare_parms
         # Got replaced by the method above, to use the DRY-method of developing
-        #@post = Post.find(params[:id])
+        # @post = Post.find(params[:id])
     end
 
     # GET /posts/new
