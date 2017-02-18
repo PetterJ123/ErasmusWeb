@@ -3,9 +3,12 @@
 = Project Name: ErasmusWeb
 = Date created: 08/12 - 2016 (Github repo initiated)
 = Purpose: To inform about the ERASMUS+ school project and about Organic Food Production in Schools for Sustainability and Healthy Future Generations
--->
 
-<!-- Application-specific code, that are spilt up and displayed on every page -->
+=============================================================================================================
+Application-specific code, this code will apply across the whole application. It doesn't take any specific input except
+some user made link interaction.
+
+-->
 
 <!DOCTYPE html>
 <html>
@@ -32,7 +35,7 @@
             <p><%= current_user.email %></p>
         <% else %>
             <div id="signupinout" class="hidden-xs hidden-sm">
-                <div id="signup"><%= link_to "Sign Up |", new_user_registration_path %></div>
+                <div id="signup"><%= link_to "Sign Up", new_user_registration_path %></div>
                 <div id="signin"><%= link_to "Sign In", new_user_session_path %></div>
             </div>
         <% end %> 
