@@ -9,6 +9,5 @@ class MenuController < ApplicationController
     end
 
     def profile
-
     end
 end
