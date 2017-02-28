@@ -3,11 +3,10 @@
     <img src="/assets/logga.png" id="logo" width="13%">
     <nav>
         <ul class="nav">
-            <li><img class="icons" src="assets/houseicon.png"><%= link_to "Home", root_path %></li>
-            <li><img class="icons" src="assets/posticon.png"><%= link_to "Posts",  posts_path %></li>
-            <li><img class="icons" src="assets/earthicon.png"><%= link_to "Countries", menu_countries_path %></li>
-            <li><img class="icons" src="assets/abouticon.png"><%= link_to "About", menu_about_path %></li>
-            <!--<li>#%= link_to "Profile", menu_profile_path %></li>-->
+            <li><img class="icons" src="assets/houseicon.png"><%= link_to 'Home', root_path %></li>
+            <li><img class="icons" src="assets/posticon.png"><%= link_to 'Posts', posts_path %></li>
+            <li><img class="icons" src="assets/earthicon.png"><%= link_to 'Countries', menu_countries_path %></li>
+            <li><img class="icons" src="assets/abouticon.png"><%= link_to 'About', menu_about_path %></li>
 
             <% if user_signed_in? %>
                 <li><%= link_to "Profile", menu_profile_path %></li>

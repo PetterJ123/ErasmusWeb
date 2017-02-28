@@ -8,6 +8,7 @@ class MenuController < ApplicationController
     def about
     end
 
-    def profile
+    def profile_params
+
     end
 end

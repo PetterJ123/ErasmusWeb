@@ -1,5 +1,5 @@
-<%= render "partials/meny" %>
-<h1>Profile?</h1>
+<!-- #%= render 'partials/meny' %> -->
+<h1>Profile for <%= current_user.email %></h1>
 <div class="row" id="main">
 
   <img src="#"/>          <!-- A users profile picture -->
@@ -8,20 +8,13 @@
     <%= current_user.email %>
   <% end %>
 
-  <!-- IMPORTANT!
-        Below code contains in-line style that will override
-        a dedicated stylesheet
-        -->
-  <div id="passwordForm" style="width: 20%;
-                                margin-left: 100px;">
-    <label>Old password</label>
-    <input type="password"/>
-    <label>New Password</label>
-    <input type="password"/>
-    <label>Confirm new password</label>
-    <input type="password"/>
-    <button>Submit</button>
-  </div>
+  <!--#%= form_for(user) do |f| %>
+      #%= f.text_field :password_field %>
+      #%= f.label 'New Password' %>
+      #%= f.text_field :password_field %>
+      #%= f.label 'Confirm new password' %>
+      #%= f.text_field :password_field %>
+  #% end %>-->
 
+<!--#%= render 'partials/footer' %> -->
 </div>
-<%= render "partials/footer" %>

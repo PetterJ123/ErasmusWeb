@@ -16,8 +16,8 @@
 
 /*Here the application's overall style will be written*/
 
-//@import "bootstrap-sprockets";
-//@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 *{
     margin: 0px;
