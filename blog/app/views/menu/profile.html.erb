@@ -1,16 +1,13 @@
-<%= render "partials/meny" %>
+<%= render 'partials/meny' %>
 <article id="profile" class="col-md-10 col-md-offset-2">
-  <img src="#"/>
+  <!--<img src="#"/>-->
   <h1>Profile for <%= current_user.email %></h1>
     <div id="main">
+      <%= form_for do |f| %>
+        <%= f.text_field :username %>
+        <%= f.submit 'Save username' %>
+      <% end %>
 
-  <!--#%= form_for(user) do |f| %>
-      #%= f.text_field :password_field %>
-      #%= f.label 'New Password' %>
-      #%= f.text_field :password_field %>
-      #%= f.label 'Confirm new password' %>
-      #%= f.text_field :password_field %>
-  #% end %>-->
       <div>
         <h1>Number of posts on your profile: </h1>
       </div>
