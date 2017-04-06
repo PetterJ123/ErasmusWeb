@@ -1,5 +1,9 @@
 class MenuController < ApplicationController
+    helper_method :index, :name
   def index
+    # user = User.create(:username => 'Petter')
+    # user.username
+    # user.save
   end
 
   def countries
@@ -11,7 +15,7 @@ class MenuController < ApplicationController
   def profile_params
   end
 
-  def write_username
-
+  def name=(new_name)
+    write_attribute(:username, new_name)
   end
 end
