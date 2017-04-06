@@ -3,15 +3,16 @@
   <!--<img src="#"/>-->
   <h1>Profile for <%= current_user.email %></h1>
     <div id="main">
-      <%= form_for do |f| %>
-        <%= f.text_field :username %>
-        <%= f.submit 'Save username' %>
-      <% end %>
+
+      <%= form_tag :action => 'write_username', :id => @user.write_username %>
+          <%= label_tag 'username: ' %>
+          <%= text_field_tag 'username', nil, placeholder: 'Enter username... ' %>
+          <%= submit_tag %>
+
 
       <div>
         <h1>Number of posts on your profile: </h1>
       </div>
-
-<!--#%= render "partials/footer" %>-->
   </div>
+  <%= render 'partials/footer' %>
 </article>

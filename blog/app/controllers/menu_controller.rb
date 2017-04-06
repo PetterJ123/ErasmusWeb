@@ -1,14 +1,17 @@
 class MenuController < ApplicationController
-    def index
-    end
+  def index
+  end
 
-    def countries
-    end
+  def countries
+  end
 
-    def about
-    end
+  def about
+  end
 
-    def profile_params
+  def profile_params
+  end
 
-    end
+  def write_username
+
+  end
 end
