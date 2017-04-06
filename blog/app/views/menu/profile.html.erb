@@ -1,10 +1,14 @@
-#%= render 'partials/meny' %>
+<%= render 'partials/meny' %>
 <article id="profile" class="col-md-10 col-md-offset-2">
   <!--<img src="#"/>-->
   <h1>Profile for <%= current_user.email %></h1>
-  <h1><%= name=('Petter') %></h1>
     <div id="main">
+      <%= form_for :user, method: 'put' do |f| %>
+        Enter username: <%= f.text_field :username %>
+                        <%= f.submit %>
+      <% end %>
+      <h1><%= %></h1>
   </div>
 
-  #%= render 'partials/footer' %>
+  <%= render 'partials/footer' %>
 </article>
