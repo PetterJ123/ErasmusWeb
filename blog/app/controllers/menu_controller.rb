@@ -1,5 +1,4 @@
 class MenuController < ApplicationController
-    helper_method :index, :name
   def index
   end
 
@@ -13,6 +12,5 @@ class MenuController < ApplicationController
   end
 
   def profile
-
   end
 end
