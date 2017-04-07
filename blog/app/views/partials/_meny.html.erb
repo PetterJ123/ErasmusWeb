@@ -1,12 +1,27 @@
 <!-- Navigation menu -->
 <aside class="hidden-xs hidden-sm col-md-2 col-lg-2">
     <img src="/assets/logga.png" id="logo" width="13%">
-    <nav>
-        <ul class="nav">
-            <li><img class="icons" src="assets/houseicon.png"><%= link_to "Home", root_path %></li>
-            <li><img class="icons" src="assets/posticon.png"><%= link_to "Posts",  posts_path %></li>
-            <li><img class="icons" src="assets/earthicon.png"><%= link_to "Countries", menu_countries_path %></li>
-            <li><img class="icons" src="assets/abouticon.png"><%= link_to "About", menu_about_path %></li>
-        </ul>
-    </nav>
+    <ul class="menulist">
+        <li class="">
+        <%= link_to root_path do %>
+        	<img class="icons" src="assets/houseicon.png">Home
+        <% end %>
+        </li>
+        <li>
+        <%= link_to posts_path do %>
+        	<img class="icons" src="assets/posticon.png">Posts
+        <% end %>
+        </li>
+        <li>
+        <%= link_to menu_countries_path do %>
+        	<img class="icons" src="assets/earthicon.png">Countries
+        <% end %></li>
+        <li>
+        <%= link_to menu_about_path do %>
+        	<img class="icons" src="assets/abouticon.png">About
+        <% end %>
+        </li>            
+    </ul>
 </aside>
+
+

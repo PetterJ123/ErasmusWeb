@@ -4,36 +4,41 @@
 
 
 body {
-    background-color: #84A151 !important;
-    color: #333;
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
+  background-color: #84A151 !important;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 /*---------CSS for the menu------------*/
 aside {
   color: #FFFFFF;
+
 }
 
 #logo {
   position: fixed;
-  top: 1%;
-  left: 1.7%;
+  top: 1.5%;
 }
 
-.nav {
+.menulist{
   margin: 0;
-  width: 100%;
+  width: 20%;
   position: fixed;
   top: 30%;
-  left: 2%;
+  left: 0;
 }
 
 aside li {
   width: 100%;
   min-height: 1.5em;
   margin-bottom: 5px;
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: #848170 !important;
+  }
 }
 
 .icons {
@@ -42,18 +47,21 @@ aside li {
 }
 
 aside a {
-    color: #FFFFFF;
-    float: left;
-    padding: 0 !important;
+  color: #FFFFFF;
+  float: left;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 4% 0% 4% 20%;
 
-    &:visited {
-        color: #FFFFFF;
-    }
+  &:visited {
+      color: #FFFFFF;
+  }
 
-    &:hover {
-        color: #FFFFFF;
-        background-color: #848170;
-    }
+  &:hover {
+    background-color: transparent !important;
+    text-decoration: none;
+  }
 }
 
 #signupinout #signup a{
@@ -90,6 +98,74 @@ aside a {
   }  
 }
 
+#signupinout #signout p{
+  z-index: 10;
+  color: #FFFFFF;
+  position: fixed;
+  left: 2%;
+  bottom: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+#xssignupinout #xssignup a{
+  z-index: 10;
+  color: #FFFFFF;
+  position: absolute;
+  left: 3%;
+  top: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+#xssignupinout #xssignin a{
+  z-index: 10;
+  color: #FFFFFF;
+  position: absolute;
+  left: 9%;
+  top: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+#xssignupinout #xssignout p{
+  z-index: 10;
+  color: #FFFFFF;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
 
 article {
   background-color: #FFFFFF;
@@ -100,161 +176,198 @@ article {
 }
 
 header {
-    background-color: #e4f5b1;
-    color: #FFFFFF;
+  background-color: #e4f5b1;
+  color: #FFFFFF;
 }
 
 #infofield {
-    border-bottom: solid #848170 2px;
+  border-bottom: solid #848170 2px;
 }
 
 #xl-infonav {
-    padding: 10px 25px 10px 25px;
-    height: 50px;
+  padding: 10px 25px 10px 25px;
+  height: 50px;
 }
 
 #xs-infonav {
-    padding: 10px;
-    height: 50px;
-    background-color: #84A151;
-    color: #FFFFFF;
+  padding: 10px;
+  height: 50px;
+  background-color: #84A151;
+  color: #FFFFFF;
 }
 
 #burgermeny {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .page {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 #searchfield {
-    float: right;
-    margin: 0;
-    height: 26px;
+  float: right;
+  margin: 0;
+  height: 26px;
 }
 
 #searchicon {
-    float: right;
-    width: 30px;
+  float: right;
+  width: 30px;
 }
 
 #search {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 #main{
-    padding: 50px 10% 50px 10%;
-    min-height: 57.5em;
+  padding: 5% 5% 10% 5%;
+  min-height: 57.5em;
+  margin-bottom: 10%;
+  word-break: break-all;
 }
 
 footer {
-    background-color: #848170;
-    color: #FFFFFF;
-    width: 100%;
+  background-color: #848170;
+  color: #FFFFFF;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 p, ol, ul, td {
-    font-family: verdana, arial, helvetica, sans-serif;
-    line-height: 18px;
-    margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  line-height: 18px;
+  margin: 33px;
 }
 
 pre {
-    background-color: #eee;
-    padding: 10px;
-    font-size: 11px;
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
 }
 
 a {
-    color: #000;
+  color: #000;
 
-    &:visited {
-        color: #666;
-    }
+  &:visited {
+      color: #666;
+  }
 
-    &:hover {
-        color: #fff;
-        background-color: #000;
-    }
+  &:hover {
+      color: #fff;
+      background-color: #000;
+  }
 }
 
 th {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 td {
-    padding-bottom: 7px;
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
+#main #tableCont #postlist {
+  border-collapse: separate;
+
+}  
+
+#main #tableCont #postlist .postrow {
+  border-spacing: 7em;
+}
+
+#main #tableCont #postlist .postrow:nth-child(2) {
+  background-color: #CCCCCC;
+}
+
+#main #tableCont #postlist .postrow .postcontent {
+  padding-right: 20px;
+  vertical-align: top;  
+}
+
+#main #tableCont #postlist .postrow .postinfo {
+  vertical-align: top;
+  width: 25%;
+} 
+
 div {
-    &.field, &.actions {
-        margin-bottom: 10px;
-    }
+  &.field, &.actions {
+      margin-bottom: 10px;
+  }
 }
 
 #notice {
-    color: green;
+  color: green;
 }
 
 .notice {
-    position: fixed;
-    top: 0;
-    left: 300px;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 30%;
+  width: 50%;
+  height: 50px;
+  z-index: 10;
 }
 
 .alert {
-    position: fixed;
-    top: 0;
-    left: 300px;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 30%;
+  width: 50%;
+  height: 50px;
+  z-index: 10;
 }
 
 .field_with_errors {
-    padding: 2px;
-    background-color: red;
-    display: table;
+  padding: 2px;
+  background-color: red;
+  display: table;
 }
 
 #error_explanation {
-    width: 450px;
-    border: 2px solid red;
-    padding: 7px;
-    padding-bottom: 0;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 
-    h2 {
-        text-align: left;
-        font-weight: bold;
-        padding: 5px 5px 5px 15px;
-        font-size: 12px;
-        margin: -7px;
-        margin-bottom: 0;
-        background-color: #c00;
-        color: #fff;
-    }
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+  }
 
-    ul li {
-        font-size: 12px;
-        list-style: square;
-    }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
 }
 
 label {
-    display: block;
+  display: block;
 }
 
 /*Design for different screen-sizes*/
 
+@media only screen and (min-width:992px) and (max-width:1416px) {
+  #logo {
+    left: 0;
+  }
+}
+
 @media only screen and (min-width:992px) and (max-width:1450px) {
-  .nav > li {
+  .menulist > li {
     font-size: 1.5em;
   }
   #signupinout > #signup > a, #signupinout > #signin > a {
@@ -275,10 +388,16 @@ label {
   p, ol, ul, td {
     font-size: 1.2em;
   }
+  #main #tableCont #postlist .postrow .postcontent {
+    width: 30em;
+  }
+  #logo {
+    left: 1.3%;
+  }
 }
 
 @media only screen and (min-width:1451px) and (max-width: 1700px) {
-  .nav > li, #signupinout > #signup > a,#signupinout > #signin > a {
+  .menulist > li, #signupinout > #signup > a,#signupinout > #signin > a {
     font-size: 1.7em;
   } 
   header, footer {
@@ -296,10 +415,16 @@ label {
   p, ol, ul, td {
     font-size: 1.3em;
   }
+  #main #tableCont #postlist .postrow .postcontent {
+    width: 50em;
+  }
+  #logo {
+    left: 1.75%;
+  }
 }
 
 @media only screen and (min-width:1701px) {
-  .nav > li, #signupinout > #signup > a, #signupinout > #signin > a{
+  .menulist > li, #signupinout > #signup > a, #signupinout > #signin > a{
     font-size: 2em;
   }
   header, footer {
@@ -316,5 +441,14 @@ label {
   }  
   p, ol, ul, td {
     font-size: 1.5em;
+  }
+  #main #tableCont #postlist .postrow .postcontent {
+    width: 70em;
+  }
+  aside li a {
+    padding-top: 5% ;
+  }
+  #logo {
+    left: 1.9%;
   }
 }

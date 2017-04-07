@@ -26,16 +26,30 @@
         </div>
 
         <!-- Wil "ask" user to log in/authenticate and if already authenticated it will display current user and a log out button -->
-        
-        <% if user_signed_in? %>
-            <p>Sign out</p>
-            <p><%= current_user.email %></p>
-        <% else %>
-            <div id="signupinout" class="hidden-xs hidden-sm">
+        <div id="signupinout" class="hidden-xs hidden-sm">
+            <% if user_signed_in? %>
+                <div id="signout">
+                    <p>Sign out
+                    <%= current_user.email %></p>
+                </div>    
+            <% else %>
                 <div id="signup"><%= link_to "Sign Up |", new_user_registration_path %></div>
                 <div id="signin"><%= link_to "Sign In", new_user_session_path %></div>
-            </div>
-        <% end %> 
-        <%= yield %>
+            <% end %> 
+            <%= yield %>
+        </div>
+
+        <div id="xssignupinout" class="hidden-md hidden-lg">
+            <% if user_signed_in? %>
+                <div id="xssignout">
+                    <p>Sign out
+                    <%= current_user.email %></p>
+                </div>    
+            <% else %>
+                <div id="xssignup"><%= link_to "Sign Up |", new_user_registration_path %></div>
+                <div id="xssignin"><%= link_to "Sign In", new_user_session_path %></div>
+            <% end %> 
+            <%= yield %>
+        </div>
         
         <!-- The rest of the unique page information is transferred to it's file, also the ending of this page-->
