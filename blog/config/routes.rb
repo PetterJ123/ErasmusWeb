@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  #mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/destroy'
+
+  get 'users/show'
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
     get 'menu/index'
     root 'menu#index'
 

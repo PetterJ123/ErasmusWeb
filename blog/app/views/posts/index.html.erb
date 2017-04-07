@@ -1,4 +1,4 @@
-<%= render "partials/meny" %>
+<%= render 'partials/meny' %>
 <article class="col-md-10 col-lg-10">
 
       <div class="row" id="infofield">
@@ -36,7 +36,7 @@
                         <tr>
                             <td><%= post.head %></td>
                             <td><%= post.content %></td>
-                            <td>#%= post.user.email %></td>
+                            <td><%= post.user.email %></td>
                             <td><%= link_to 'Show', post %></td>
 
                             <% if post.user == current_user %>
@@ -50,6 +50,6 @@
                 <%= link_to 'New Post', new_post_path %>
             </div>
         </div>
-        <%= render "partials/footer" %>
+        <%= render 'partials/footer' %>
     </div> 
 </article>

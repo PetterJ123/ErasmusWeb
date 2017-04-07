@@ -1,4 +1,5 @@
 class MenuController < ApplicationController
+  helper_attr :update_profile
   def index
   end
 
@@ -8,9 +9,8 @@ class MenuController < ApplicationController
   def about
   end
 
-  def profile_params
-  end
-
   def profile
+    usr = User.create(:username => 'Petter')
+    usr.username
   end
 end

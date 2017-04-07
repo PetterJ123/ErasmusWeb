@@ -3,12 +3,12 @@
   <!--<img src="#"/>-->
   <h1>Profile for <%= current_user.email %></h1>
     <div id="main">
-      <%= form_for :user, method: 'put' do |f| %>
-        Enter username: <%= f.text_field :username %>
-                        <%= f.submit %>
-      <% end %>
-      <h1><%= %></h1>
-  </div>
 
+      <%# form_for(@user, remote: true) do |f| %>
+        <%# f.text_field :username %>
+        <%# f.submit %>
+      <%# end %>
+
+  </div>
   <%= render 'partials/footer' %>
 </article>

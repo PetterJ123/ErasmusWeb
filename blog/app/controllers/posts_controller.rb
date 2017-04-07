@@ -68,10 +68,6 @@ class PostsController < ApplicationController
       end
     end
 
-    def write_username
-      @@username
-    end
-
   private
     def set_post
       unless @post == Post.where(id: params[:post_id]).first
