@@ -1,5 +1,5 @@
 class MenuController < ApplicationController
-  helper_attr :profile
+  # helper_attr :profile
   def index
   end
 
@@ -7,9 +7,5 @@ class MenuController < ApplicationController
   end
 
   def about
-  end
-
-  def profile
-    @usr = User.create(:username => 'Petter')
   end
 end
