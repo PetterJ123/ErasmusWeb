@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base #ApplicationRecord
+class User < ApplicationRecord
   include ActiveModel::AttributeMethods
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -8,5 +8,4 @@ class User < ActiveRecord::Base #ApplicationRecord
 
   validates :email, uniqueness: true
   has_many :posts
-
 end

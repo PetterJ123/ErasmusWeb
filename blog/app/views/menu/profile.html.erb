@@ -4,9 +4,12 @@
   <h1>Profile for <%= current_user.email %></h1>
     <div id="main">
 
+      <% @user = User.new %>
+      <% @user = User.create(params[:username]) %>
       <%= form_for @user do |f| %>
-        <%= f.text_Field :username %>
-        <%= f.submit 'Set username' %>
+        <%= f.text_field :username%>
+        <%= f.submit %>
+        <%= @user.username %>
       <% end %>
 
   </div>
