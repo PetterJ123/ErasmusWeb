@@ -21,10 +21,10 @@
 .byebug_history
 
 # Ignore rubymine xml-files, comes maninly from petter
-*/.idea/blog.iml
-*/.idea/dictonaries/root.xml
-*/.idea/misc.xml
-*/.idea/modules.xml
-*/.idea/workspace.xml
+blog/.idea/blog.iml
+blog/.idea/dictonaries/root.xml
+blog/.idea/misc.xml
+blog/.idea/modules.xml
+blog/.idea/workspace.xml
 
 .idea/*
