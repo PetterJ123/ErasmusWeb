@@ -31,7 +31,13 @@ some user made link interaction.
         <!-- Wil "ask" user to log in/authenticate and if already authenticated it will display current user and a log out button -->
         <div id="sessionHandlingDiv">
         <% if user_signed_in? %>
-              <p id="mailTag"><%= current_user.email %></p>
+              <p id="mailTag">
+                <% @user = User.find(current_user.id) %>
+                <%= @user.username %>
+                <br>
+                <br>
+                <%= current_user.email %>
+              </p>
               <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
         <% else %>
             <div id="signupinout" class="hidden-xs hidden-sm">

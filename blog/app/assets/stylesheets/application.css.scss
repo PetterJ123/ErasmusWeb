@@ -20,19 +20,25 @@
 @import 'bootstrap';
 
 *{
-    margin: 0px;
-    padding: 0px;
-    font-family: "Source Sans Pro", serif;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Source Sans Pro", serif;
 }
 
 .noteCont{
-    position: fixed;
+  position: static;
+  z-index: 3;
+}
+
+.notice{
+  background-color: green;
+  z-index: 3;
 }
 
 #sessionHandlingDiv{
-    position: fixed;
-    bottom: 0px;
-    width: 16.7%;
-    padding: 20px;
-    text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width: 16.7%;
+  padding: 20px;
+  text-align: center;
 }

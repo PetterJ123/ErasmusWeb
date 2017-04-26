@@ -2,16 +2,15 @@
 <article id="profile" class="col-md-10 col-md-offset-2">
   <!--<img src="#"/>-->
   <h1>Profile for <%= current_user.email %></h1>
+  <h1><%= @user.username %></h1>
+
     <div id="main">
 
-      <% @user = User.new %>
-      <% @user = User.create(params[:username]) %>
-      <%= form_for @user do |f| %>
-        <%= f.text_field :username%>
-        <%= f.submit %>
-        <%= @user.username %>
+      <% form_for @user do |f| %>
+        <% f.text_field :username %>
+        <% f.submit 'Set username' %>
       <% end %>
 
-  </div>
+    </div>
   <%= render 'partials/footer' %>
 </article>
