@@ -20,5 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# Ignore rubymine xml-files, comes maninly from petter
+../.idea/*.xml
+
 # Ignore Rubymine settings file
-.idea
+../.idea/
