@@ -24,6 +24,4 @@
 ../.idea/*.xml
 
 # Ignore Rubymine settings file
-/.idea/
-../.idea/
 ../.idea/
