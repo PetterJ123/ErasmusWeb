@@ -25,3 +25,4 @@
 
 # Ignore Rubymine settings file
 ../.idea/
+/.idea/
