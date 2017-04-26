@@ -1,14 +1,11 @@
 class MenuController < ApplicationController
-    def index
-    end
+  # helper_attr :profile
+  def index
+  end
 
-    def countries
-    end
+  def countries
+  end
 
-    def about
-    end
-
-    def profile_params
-
-    end
+  def about
+  end
 end
