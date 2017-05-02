@@ -4,6 +4,8 @@ source 'http://rubygems.org'
 #=Custom gems=#
 #=============#
 
+gem 'paperclip', '5.0.0'
+
 # Bootstrap related
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
