@@ -2,26 +2,58 @@
 <aside class="hidden-xs hidden-sm col-md-2 col-lg-2">
     <img src="/assets/logga.png" id="logo" width="13%">
     <ul class="menulist">
-        <li class="">
+        <li class="publicmenu">
         <%= link_to root_path do %>
-        	<img class="icons" src="assets/houseicon.png">Home
+        	<img class="icons" src="assets/houseicon.png">Start
         <% end %>
         </li>
-        <li>
+        <li class="publicmenu">
         <%= link_to posts_path do %>
         	<img class="icons" src="assets/posticon.png">Posts
         <% end %>
         </li>
-        <li>
+        <li class="publicmenu">
         <%= link_to menu_countries_path do %>
         	<img class="icons" src="assets/earthicon.png">Countries
         <% end %></li>
-        <li>
+        <li class="publicmenu">
+        <%= link_to root_path do %>
+        	<img class="icons" src="assets/eventicon.png">Events
+        <% end %></li>
+        <li class="publicmenu">
         <%= link_to menu_about_path do %>
         	<img class="icons" src="assets/abouticon.png">About
         <% end %>
-        </li>            
+        </li>  
+        <% if user_signed_in? %>
+        	<div id="inloggedmenu">
+	        	<p id="mail"><img id="profilepic" src="assets/profileex.png"><%= current_user.email %></p>
+	        	 <li class="privatemenu">
+	        		<%= link_to menu_profile_path do %>
+	        		<img class="icons" src="assets/houseicon.png">Home
+	        		<% end %>
+	        	</li>
+	        	<li class="privatemenu">
+	        		<%= link_to menu_profile_path do %>
+	        		<img class="icons" src="assets/lettericon.png">Inbox
+	        		<% end %>
+	        	</li>
+	        	<li class="privatemenu">
+	        		<%= link_to menu_profile_path do %>
+	        		<img class="icons" src="assets/flagicon.png">Notifications
+	        		<% end %>
+	        	</li>
+	        	<li class="privatemenu">
+	        		<%= link_to menu_profile_path do %>
+	        		<img class="icons" src="assets/eventicon.png">My event
+	        		<% end %>
+	        	</li>
+	        	<li class="privatemenu">
+	        		<%= link_to menu_profile_path do %>
+	        		<img class="icons" src="assets/wheelicon.png">Settings
+	        		<% end %>
+	        	</li>
+	        </div>	
+        <% end %>          
     </ul>
 </aside>
-
-

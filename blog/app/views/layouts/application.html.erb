@@ -3,9 +3,12 @@
 = Project Name: ErasmusWeb
 = Date created: 08/12 - 2016 (Github repo initiated)
 = Purpose: To inform about the ERASMUS+ school project and about Organic Food Production in Schools for Sustainability and Healthy Future Generations
--->
 
-<!-- Application-specific code, that are spilt up and displayed on every page -->
+=============================================================================================================
+Application-specific code, this code will apply across the whole application. It doesn't take any specific input except
+some user made link interaction.
+
+-->
 
 <!DOCTYPE html>
 <html>
@@ -26,14 +29,13 @@
         </div>
 
         <!-- Wil "ask" user to log in/authenticate and if already authenticated it will display current user and a log out button -->
+   
         <div id="signupinout" class="hidden-xs hidden-sm">
             <% if user_signed_in? %>
-                <div id="signout">
-                    <p>Sign out
-                    <%= current_user.email %></p>
-                </div>    
+                  <div id="logout">
+                  <%= link_to 'Logout', destroy_user_session_path, :method => :delete %></div>
             <% else %>
-                <div id="signup"><%= link_to "Sign Up |", new_user_registration_path %></div>
+                <div id="signup"><%= link_to "Sign Up", new_user_registration_path %></div>
                 <div id="signin"><%= link_to "Sign In", new_user_session_path %></div>
             <% end %> 
             <%= yield %>
@@ -41,15 +43,13 @@
 
         <div id="xssignupinout" class="hidden-md hidden-lg">
             <% if user_signed_in? %>
-                <div id="xssignout">
-                    <p>Sign out
-                    <%= current_user.email %></p>
-                </div>    
+                  <div id="xslogout"><p><%= current_user.email %></p>
+                  <%= link_to 'Logout', destroy_user_session_path, :method => :delete %></div>
             <% else %>
-                <div id="xssignup"><%= link_to "Sign Up |", new_user_registration_path %></div>
+                <div id="xssignup"><%= link_to "Sign Up", new_user_registration_path %></div>
                 <div id="xssignin"><%= link_to "Sign In", new_user_session_path %></div>
             <% end %> 
             <%= yield %>
         </div>
-        
+      
         <!-- The rest of the unique page information is transferred to it's file, also the ending of this page-->

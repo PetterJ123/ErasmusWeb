@@ -6,13 +6,12 @@ source 'http://rubygems.org'
 
 # Bootstrap related
 gem 'bootstrap-sass'
-gem 'autoprefixer-rails'
 
 # Authentication to authenticate users for the website
 gem 'devise', '~> 4.2'
 
 # Adminpanel that only assigned admins can access
-gem 'rails_admin', '~> 1.0'
+gem 'rails_admin'
 
 #=====================================================
 

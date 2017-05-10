@@ -20,20 +20,32 @@ aside {
 #logo {
   position: fixed;
   top: 1.5%;
+  z-index: 10;
 }
 
 .menulist{
   margin: 0;
   width: 20%;
   position: fixed;
-  top: 30%;
+  top: 27%;
   left: 0;
 }
 
-aside li {
+aside > ul > .publicmenu {
   width: 100%;
   min-height: 1.5em;
   margin-bottom: 5px;
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: #848170 !important;
+  }
+}
+
+aside > ul > #inloggedmenu > .privatemenu {
+  width: 100%;
+  min-height: 1em;
+  margin-bottom: 3px;
 
   &:hover {
     color: #FFFFFF;
@@ -52,7 +64,6 @@ aside a {
   text-decoration: none;
   width: 100%;
   height: 100%;
-  padding: 4% 0% 4% 20%;
 
   &:visited {
       color: #FFFFFF;
@@ -64,7 +75,35 @@ aside a {
   }
 }
 
-#signupinout #signup a{
+aside > ul > .publicmenu > a {
+  padding: 4% 0% 4% 7%;
+}
+
+aside > ul > #inloggedmenu {
+  margin-top: 1em;
+}
+
+aside > ul > #inloggedmenu > p {
+  border-bottom: solid black 2px;
+  padding-left: 2%;
+  font-size: 1em;
+}
+
+aside > ul > #inloggedmenu > p > #profilepic {
+  margin-right: 2%;
+}
+
+#mail {
+  width: 83.5%;
+  word-break: break-all;
+  font-size: 0.6em !important;
+}
+
+aside > ul > #inloggedmenu > .privatemenu > a {
+  padding: 4% 0% 4% 20%;
+}
+
+#signupinout #signup a {
   z-index: 10;
   color: #FFFFFF;
   position: fixed;
@@ -81,7 +120,7 @@ aside a {
   }  
 }
 
-#signupinout #signin a{
+#signupinout #signin a {
   z-index: 10;
   color: #FFFFFF;
   position: fixed;
@@ -98,7 +137,7 @@ aside a {
   }  
 }
 
-#signupinout #signout p{
+#signupinout #signout p {
   z-index: 10;
   color: #FFFFFF;
   position: fixed;
@@ -115,7 +154,42 @@ aside a {
   }  
 }
 
-#xssignupinout #xssignup a{
+#signupinout #logout a {
+  z-index: 10;
+  color: #FFFFFF;
+  position: fixed;
+  left: 6%;
+  bottom: 4%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+
+#signupinout #logout p {
+  z-index: 10;
+  color: #FFFFFF;
+  position: fixed;
+  left: 2%;
+  bottom: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+#xssignupinout #xssignup a {
   z-index: 10;
   color: #FFFFFF;
   position: absolute;
@@ -166,6 +240,40 @@ aside a {
   }  
 }
 
+#signupinout #xslogout a {
+  z-index: 10;
+  color: #FFFFFF;
+  position: absolute;
+  left: 3%;
+  top: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
+#signupinout #xslogout p {
+  z-index: 10;
+  color: #FFFFFF;
+  position: absolute;
+  left: 2%;
+  top: 5%;
+ 
+  &:visited {
+      color: #FFFFFF;
+  }
+
+  &:hover {
+      color: #FFFFFF;
+      background-color: #848170;
+  }  
+}
+
 
 article {
   background-color: #FFFFFF;
@@ -173,6 +281,7 @@ article {
   border-collapse: collapse;
   width: 100%;
   margin-left: 0;
+  padding-left: 0 !important;
 }
 
 header {
@@ -181,12 +290,11 @@ header {
 }
 
 #infofield {
-  border-bottom: solid #848170 2px;
+  border-bottom: solid #303030 2px;
 }
 
 #xl-infonav {
-  padding: 10px 25px 10px 25px;
-  height: 50px;
+  padding: 0.8% 5% 5% 4.2%;
 }
 
 #xs-infonav {
@@ -214,7 +322,7 @@ header {
 
 #searchicon {
   float: right;
-  width: 30px;
+  width: 25%;
 }
 
 #search {
@@ -230,11 +338,21 @@ header {
 }
 
 footer {
-  background-color: #848170;
+  background-color: #303030;
   color: #FFFFFF;
   width: 100%;
   position: absolute;
   bottom: 0;
+  margin-left: 0;
+  padding: 2% 20% 2% 15%;
+}
+
+#footleft {
+  float: left;
+}
+
+#footright {
+  float: right;
 }
 
 p, ol, ul, td {
@@ -274,19 +392,18 @@ td {
 
 #main #tableCont #postlist {
   border-collapse: separate;
-
 }  
 
 #main #tableCont #postlist .postrow {
-  border-spacing: 7em;
+  border-bottom: solid;
 }
 
-#main #tableCont #postlist .postrow:nth-child(2) {
-  background-color: #CCCCCC;
+#main #tableCont #postlist .postrow:nth-child(even) {
+
 }
 
 #main #tableCont #postlist .postrow .postcontent {
-  padding-right: 20px;
+  padding: 0 2em 5em 0;
   vertical-align: top;  
 }
 
@@ -349,9 +466,12 @@ div {
   }
 
   ul li {
-    font-size: 12px;
     list-style: square;
   }
+}
+
+ul {
+  list-style-type: none;
 }
 
 label {
@@ -362,15 +482,22 @@ label {
 
 @media only screen and (min-width:992px) and (max-width:1416px) {
   #logo {
-    left: 0;
+    left: 1.75% !important;
+  }
+  aside a {
+    padding-left: 10% !important;
+    font-size: 0.8em;
   }
 }
 
 @media only screen and (min-width:992px) and (max-width:1450px) {
-  .menulist > li {
-    font-size: 1.5em;
+  .menulist > .publicmenu {
+    font-size: 1.3em;
   }
   #signupinout > #signup > a, #signupinout > #signin > a {
+    font-size: 1em;
+  }
+  .menulist > .privatemenu {
     font-size: 1em;
   }
   header, footer {
@@ -378,6 +505,7 @@ label {
   }
   #infofield {
     height: 50px;
+    margin-left: 0;
   }
   .page, #search {
     font-size: 2em;
@@ -388,6 +516,9 @@ label {
   p, ol, ul, td {
     font-size: 1.2em;
   }
+  #main #tableCont #postlist {
+    width: 100%;
+  }
   #main #tableCont #postlist .postrow .postcontent {
     width: 30em;
   }
@@ -397,14 +528,18 @@ label {
 }
 
 @media only screen and (min-width:1451px) and (max-width: 1700px) {
-  .menulist > li, #signupinout > #signup > a,#signupinout > #signin > a {
-    font-size: 1.7em;
+  .menulist > .publicmenu, #signupinout > #signup > a,#signupinout > #signin > a {
+    font-size: 1.5em;
   } 
+  .menulist > .privatemenu {
+    font-size: 1em;
+  }
   header, footer {
     height: 250px;
   }
   #infofield {
     height: 63px;
+    margin-left: 0;
   }
   .page, #search {
     font-size: 2.3em;
@@ -415,6 +550,9 @@ label {
   p, ol, ul, td {
     font-size: 1.3em;
   }
+  #main #tableCont #postlist {
+    width: 75%;
+  }
   #main #tableCont #postlist .postrow .postcontent {
     width: 50em;
   }
@@ -424,14 +562,18 @@ label {
 }
 
 @media only screen and (min-width:1701px) {
-  .menulist > li, #signupinout > #signup > a, #signupinout > #signin > a{
-    font-size: 2em;
+  .menulist > .publicmenu, #signupinout > #signup > a, #signupinout > #signin > a{
+    font-size: 1.8em;
+  }
+  .menulist > .privatemenu {
+    font-size: 1em;
   }
   header, footer {
     height: 300px;
   }
   #infofield {
     height: 75px;
+    margin-left: 0;
   }
   .page, #search {
     font-size: 2.5em;

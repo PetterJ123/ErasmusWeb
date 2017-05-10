@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  #mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
     get 'menu/index'
     root 'menu#index'
 
     get 'menu/countries'
 
     get 'menu/about'
+
+    get 'menu/profile'
 
     devise_for :users
     resources :posts
