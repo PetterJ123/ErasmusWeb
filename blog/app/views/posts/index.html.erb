@@ -22,30 +22,24 @@
         <div class="row" id="main">
             <!--<p id="notice"><#%= notice %></p>-->
             <div class="container" id="tableCont">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="tbHead">Head</th>
-                            <th class="tbHead">Content</th>
-                            <th class="tbHead">User</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
+                <table id="postlist">
                         <% @posts.each do |post| %>
-                        <tr>
-                            <td><%= post.head %></td>
-                            <td><%= post.content %></td>
-                            <td><%= post.user.email %></td>
-                            <td><%= link_to 'Show', post %></td>
-
-                            <% if post.user == current_user %>
-                            <td><%= link_to 'Edit', edit_post_path(post) %></td>
-                            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                            <% end %>
+                        <tr class="postrow">
+                            <td class="postcontent">
+                                <strong><%= post.head %></strong><br><br>
+                                <%= post.content %>
+                            </td>
+                            <td class="postinfo">
+                                <%= post.user.email %><br>
+                                <%= link_to 'Show', post %><br>        
+                            
+                                <% if post.user == current_user %>
+                                <%= link_to 'Edit', edit_post_path(post) %><br>
+                                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+                                <% end %>
+                            </td>
                         </tr>
                         <% end %>
-                    </tbody>
                 </table>
                 <%= link_to 'New Post', new_post_path %>
             </div>
