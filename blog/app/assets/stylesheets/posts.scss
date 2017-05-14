@@ -2,20 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*==================================================
+====================show.html.erb===================
+===================================================*/
 #contentCont{
   margin: 0px 0px 20px 0px;
-}
-
-#textContainer{
-
-}
-
-#postHeader{
-  font-size: 2em;
-}
-
-#post{
-  margin: 30px 0px 30px 1px;
 }
 
 #postContainer{
@@ -26,4 +17,33 @@
 #navigationContainer{
   font-size: 1.4em;
   background-color: #CACF95;
+}
+
+#newPost{
+  font-size: 1.3em;
+}
+
+#eachPost{
+  margin: 10px 0px 20px 0px;
+  padding: 20px;
+  background-color: #E4F5B1;
+}
+
+#managePost{
+  text-align: right;
+  font-size: 1.3em;
+}
+
+#postTitle{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+div .postcontent{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#postAuthor{
+  font-size: 1.3em;
 }

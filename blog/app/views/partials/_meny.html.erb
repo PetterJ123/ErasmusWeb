@@ -28,7 +28,7 @@
 			<!--
         <%# if user_signed_in? %>
         	<div id="inloggedmenu">
-	        	<p id="mail"><img id="profilepic" src="assets/profileex.png"><%= current_user.email %></p>
+	        	<p id="mail"><img id="profilepic" src="assets/profileex.png"><%# current_user.email %></p>
 	        	 <li class="privatemenu">
 	        		<%# link_to menu_profile_path do %>
 	        		<img class="icons" src="assets/houseicon.png">Home

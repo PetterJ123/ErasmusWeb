@@ -33,8 +33,7 @@
       </div>
       <p id="author">
         <strong>Author: </strong>
-        <% @user = User.find(current_user.id) %>
-				<%= @user.username %>
+				<%= @post.user.username %>
       </p>
     </div>
 
