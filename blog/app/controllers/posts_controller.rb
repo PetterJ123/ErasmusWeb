@@ -77,7 +77,7 @@ class PostsController < ApplicationController
   end
 
     def post_params
-      params.require(:post).permit(:head, :content)
+      params.require(:post).permit(:head, :content, :image)
     end
 
     # Private method just for calling it when needed instead of rewriting. DRY

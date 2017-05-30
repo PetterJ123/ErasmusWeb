@@ -45,8 +45,8 @@ some user made link interaction.
                         <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>    
                     </div>
                 <% else %>
-                    <div id="signup"><%= link_to "Sign Up", new_user_registration_path %></div>
-                    <div id="signin"><%= link_to "Sign In", new_user_session_path %></div>
+                    <div id="Sign up"><%= link_to "Sign Up", new_user_registration_path %></div>
+                    <div id="Sign in"><%= link_to "Sign In", new_user_session_path %></div>
                 <% end %> 
             </div>    
             <%= yield %>
@@ -64,12 +64,12 @@ some user made link interaction.
                         <%= current_user.email %>
                     </p>
                     <div id="xslogout">
-                        <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>        
+                        <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
                     </div>
                 <% else %>
                     <div id="xssignup"><%= link_to "Sign Up", new_user_registration_path %></div>
                     <div id="xssignin"><%= link_to "Sign In", new_user_session_path %></div>
-                <% end %> 
+                <% end %>
             </div>    
             <%= yield %>
             <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

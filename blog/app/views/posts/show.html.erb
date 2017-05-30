@@ -1,5 +1,5 @@
-<%= render "partials/meny" %>
-<article class="col-md-10 col-lg-10"> 
+<%= render 'partials/meny' %>
+<article class="col-md-10 col-lg-10">
 
       <div class="row" id="infofield">
         <nav id="xl-infonav" class="hidden-xs hidden-sm">
@@ -18,27 +18,30 @@
           </div>
         </nav>
       </div>
-	    <div class="row" id="main">
-	    	<p id="notice"><%= notice %></p>
+  <div class="row" id="main">
+	  <p id="notice"><%= notice %></p>
 
-			<p>
-			  <strong>Head:</strong>
-				<%= @post.head %>
-			</p>
+    <div class="col-md-13" id="postContainer">
+      <div id="textContainer">
+        <p>
+        <p id="postHeader"><%= @post.head %></p>
+        </p>
 
-			<p>
-			  <strong>Content:</strong>
-			  <%= @post.content %>
-			</p>
+        <p id="contentCont">
+        <p id="post"><%= @post.content %></p>
+        </p>
+      </div>
+      <p id="author">
+        <strong>Author: </strong>
+				<%= @post.user.username %>
+      </p>
+    </div>
 
-				<p>
-					<strong>Creator:</strong>
-					#%= @user.email %>
-				</p>
-
+    <div class="col-md-1" id="navigationContainer">
 			<%= link_to 'Edit', edit_post_path(@post) %> |
 			<%= link_to 'Back', posts_path %>
+    </div>
       	</div>
-      	<%= render "partials/footer" %>   
+      	<%= render 'partials/footer' %>
   	</div> 
 </article>
