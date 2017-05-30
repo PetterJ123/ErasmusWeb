@@ -1,6 +1,7 @@
 <%= render 'partials/meny' %>
 <article class="col-md-10 col-lg-10">
 
+      <!-- information field -->
       <div class="row" id="infofield">
         <nav id="xl-infonav" class="hidden-xs hidden-sm">
             <h3 class="page">Posts</h3>
@@ -15,34 +16,36 @@
           <h3 class="page">Posts</h3>
 
           <div id="searchfield">
+            <!-- need to make a real searchfield (example in index.html.erb) -->
             <img id="searchicon" src="/assets/searchiconxs.png">
             <h3 id="search">Search</h3>
           </div>
         </nav>
       </div>
 
-        <div class="row" id="main">
-            <!--<p id="notice"><#%= notice %></p>-->
-            <div class="container" id="postsContainer">
-              <% @posts.each do |post| %>
-                  <div id="eachPost">
-                    <p id="postTitle"><%= post.head %></p>
-                    <p class="postcontent"><%= post.content %></p>
-                    <hr>
-                    <p><strong id="postAuthor">Author: </strong><%= post.user.username %></p>
-                    <div id="managePost">
-                      <button class="btn btn-primary"><%= link_to 'Show', post %></button>
-                      <% if post.user == current_user %>
-                        <button class="btn btn-info"><%= link_to 'Edit', edit_post_path(post) %></button>
-                        <button class="btn btn-danger"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
-                      <% end %>
-                    </div>
-                  </div>
-              <% end %>
-              <p id="newPost" class="btn btn-primary"><%= link_to 'New Post', new_post_path %></p>
-            </div>
-            </div>
-          <%= render 'partials/footer' %>
+      <!-- main content -->
+      <div class="row" id="main">
+        <!--<p id="notice"><#%= notice %></p>-->
+        <div class="container" id="postsContainer">
+          <% @posts.each do |post| %>
+              <div id="eachPost">
+                <p id="postTitle"><%= post.head %></p>
+                <p class="postcontent"><%= post.content %></p>
+                <hr>
+                <p><strong id="postAuthor">Author: </strong><%= post.user.username %></p>
+                <div id="managePost">
+                  <button class="btn btn-primary"><%= link_to 'Show', post %></button>
+                  <% if post.user == current_user %>
+                    <button class="btn btn-info"><%= link_to 'Edit', edit_post_path(post) %></button>
+                    <button class="btn btn-danger"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                  <% end %>
+                </div>
+              </div>
+          <% end %>
+          <p id="newPost" class="btn btn-primary"><%= link_to 'New Post', new_post_path %></p>
         </div>
+      </div>
+      <%= render 'partials/footer' %>
     </div>
+  </div>
 </article>

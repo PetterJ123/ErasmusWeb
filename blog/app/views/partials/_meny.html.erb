@@ -24,38 +24,39 @@
         <%= link_to menu_about_path do %>
         	<img class="icons" src="assets/abouticon.png">About
         <% end %>
-        </li>
-			<!--
-        <%# if user_signed_in? %>
+        </li>  
+
+        <!-- Menuoptions for a logged in user -->
+
+        <% if user_signed_in? %>
         	<div id="inloggedmenu">
-	        	<p id="mail"><img id="profilepic" src="assets/profileex.png"><%# current_user.email %></p>
+	        	<p id="mail"><img id="profilepic" src="assets/profileex.png"><%= current_user.email %></p>
 	        	 <li class="privatemenu">
-	        		<%# link_to menu_profile_path do %>
+	        		<%= link_to menu_profile_path do %>
 	        		<img class="icons" src="assets/houseicon.png">Home
-	        		<%# end %>
+	        		<% end %>
 	        	</li>
-	        	<li class="privatemenu">
-	        		<%# link_to menu_profile_path do %>
+	        	<li class="privatemenu"> 
+	        		<%= link_to menu_profile_path do %>
 	        		<img class="icons" src="assets/lettericon.png">Inbox
-	        		<%# end %>
+	        		<% end %>
 	        	</li>
 	        	<li class="privatemenu">
-	        		<%# link_to menu_profile_path do %>
+	        		<%= link_to menu_profile_path do %>
 	        		<img class="icons" src="assets/flagicon.png">Notifications
-	        		<%# end %>
+	        		<% end %>
 	        	</li>
 	        	<li class="privatemenu">
-	        		<%# link_to menu_profile_path do %>
+	        		<%= link_to menu_profile_path do %>
 	        		<img class="icons" src="assets/eventicon.png">My event
-	        		<%# end %>
+	        		<% end %>
 	        	</li>
 	        	<li class="privatemenu">
-	        		<%# link_to menu_profile_path do %>
+	        		<%= link_to menu_profile_path do %>
 	        		<img class="icons" src="assets/wheelicon.png">Settings
-	        		<%# end %>
+	        		<% end %>
 	        	</li>
-	        </div>
-        <%# end %>
-        -->
+	        </div>	
+        <% end %>          
     </ul>
 </aside>

@@ -1,6 +1,7 @@
 <%= render "partials/meny" %>
 <article class="col-md-10 col-lg-10">  
 
+      <!-- information field -->
       <div class="row" id="infofield">
         <nav id="xl-infonav" class="hidden-xs hidden-sm">
         	<h3 class="page">Locked account</h3>
@@ -13,21 +14,24 @@
           <h3 class="page">Locked account</h3>
 
           <div id="searchfield">
+            <!-- need to make a real searchfield (example in index.html.erb) -->
             <img id="searchicon" src="/assets/searchiconxs.png">
             <h3 id="search">Search</h3>
           </div>
         </nav>
       </div>
 
+      <!-- man content -->
 	    <div class="row" id="main">
 	    	<p>Hello <%= @resource.email %>!</p>
 
-			<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+  			<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
 
-			<p>Click the link below to unlock your account:</p>
+  			<p>Click the link below to unlock your account:</p>
 
-			<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+  			<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
 	    </div>
-        <%= render "partials/footer" %>
+    
+      <%= render "partials/footer" %>
     </div> 
 </article>

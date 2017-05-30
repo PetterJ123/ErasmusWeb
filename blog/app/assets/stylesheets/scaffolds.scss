@@ -6,7 +6,20 @@ body {
   line-height: 18px;
 }
 
-/*---------CSS for the menu------------*/
+article {
+  background-color: #FFFFFF;
+  float: left;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0 !important;
+}
+
+
+
+
+/* CSS for the menu */
+
 aside {
   color: #FFFFFF;
 
@@ -269,15 +282,17 @@ aside > ul > #inloggedmenu > .privatemenu > a {
   }  
 }
 
+/* end of menu properies */
 
-article {
-  background-color: #FFFFFF;
-  float: left;
-  border-collapse: collapse;
-  width: 100%;
-  margin-left: 0;
-  padding-left: 0 !important;
-}
+
+
+
+
+
+
+
+
+/* CSS for the information field */
 
 header {
   background-color: #e4f5b1;
@@ -325,6 +340,16 @@ header {
   margin: 0;
 }
 
+/* end of information field properties */
+
+
+
+
+
+
+
+/* CSS for the main content */
+
 #main{
   padding: 5% 5% 10% 5%;
   min-height: 57.5em;
@@ -332,23 +357,27 @@ header {
   word-break: break-all;
 }
 
-footer {
-  background-color: #303030;
-  color: #FFFFFF;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  margin-left: 0;
-  padding: 2% 20% 2% 15%;
+#main #tableCont #postlist {
+  border-collapse: separate;
+}  
+
+#main #tableCont #postlist .postrow {
+  border-bottom: solid;
 }
 
-#footleft {
-  float: left;
+#main #tableCont #postlist .postrow:nth-child(even) {
+  
 }
 
-#footright {
-  float: right;
+#main #tableCont #postlist .postrow .postcontent {
+  padding: 0 2em 5em 0;
+  vertical-align: top;  
 }
+
+#main #tableCont #postlist .postrow .postinfo {
+  vertical-align: top;
+  width: 25%;
+} 
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -385,27 +414,53 @@ td {
   padding-right: 5px;
 }
 
-#main #tableCont #postlist {
-  border-collapse: separate;
-}  
-
-#main #tableCont #postlist .postrow {
-  border-bottom: solid;
+ul {
+  list-style-type: none;
 }
 
-#main #tableCont #postlist .postrow:nth-child(even) {
-
+label {
+  display: block;
 }
 
-#main #tableCont #postlist .postrow .postcontent {
-  padding: 0 2em 5em 0;
-  vertical-align: top;  
+/* end of the main content properties */
+
+
+
+
+
+
+
+
+/* CSS for the footer */
+
+footer {
+  background-color: #303030;
+  color: #FFFFFF;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-left: 0;
+  padding: 2% 20% 2% 15%;
 }
 
-#main #tableCont #postlist .postrow .postinfo {
-  vertical-align: top;
-  width: 25%;
-} 
+#footleft {
+  float: left;
+}
+
+#footright {
+  float: right;
+}
+
+/* end of footer properties */
+
+
+
+
+
+
+
+
+/* CSS for error and alerts */
 
 div {
   &.field, &.actions {
@@ -465,15 +520,14 @@ div {
   }
 }
 
-ul {
-  list-style-type: none;
-}
+/* end of error and alert properties */
 
-label {
-  display: block;
-}
 
-/*Design for different screen-sizes*/
+
+
+
+
+/*CSS for different screen-sizes*/
 
 @media only screen and (min-width:992px) and (max-width:1416px) {
   #logo {
