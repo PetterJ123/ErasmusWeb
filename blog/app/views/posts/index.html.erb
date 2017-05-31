@@ -28,7 +28,7 @@
         <div class="container" id="postsContainer">
           <% @posts.each do |post| %>
               <div id="eachPost">
-                <p id="postTitle"><%= post.head %></p>
+                <p class="postTitle"><%= post.head %></p>
                 <p class="postcontent"><%= post.content %></p>
                 <hr>
                 <p><strong id="postAuthor">Author: </strong><%= post.user.username %></p>

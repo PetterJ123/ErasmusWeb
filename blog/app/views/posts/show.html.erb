@@ -28,9 +28,9 @@
         <div class="col-md-13" id="postContainer">
           <div id="textContainer">
 
-            <p id="postHeader"><%= @post.head %></p>
+            <p class="postTitle"><%= @post.head %></p>
 
-            <p id="postContent"><%= @post.content %></p>
+            <p class="postcontent"><%= @post.content %></p>
 
             <% if @post.image.exists? %>
               <%= image_tag @post.image.url(:large) %>

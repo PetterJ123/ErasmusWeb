@@ -36,9 +36,7 @@
 
             <ul id="countrySwe">
               <li class="countries">
-                  <%= link_to root_path do %>
-                      <img class="flags" src="assets/images/swedishflag.png"><br>Sweden, Umeå
-                  <% end %>
+                <%= image_tag('swedishflag', size: '320x200') %>
               </li>
             </ul>
 
@@ -54,9 +52,7 @@
             </p>
             <ul id="countryTur">
               <li class="countries">
-                  <%= link_to root_path do %>
-                      <img class="flags" src="assets/images/turkishflag.png"><br>Turkey, Corum
-                  <% end %>
+                <%= image_tag('turkishflag', size: '320x200') %>
               </li>
             </ul>
 
@@ -79,9 +75,7 @@
 
             <ul id="countryCz">
               <li class="countries">
-                  <%= link_to root_path do %>
-                      <img class="flags" src="assets/images/czechflag.png"><br>Czech,city
-                  <% end %>
+                  <%= image_tag('czechflag', size: '320x200') %>
               </li>
             </ul>
 
@@ -99,11 +93,11 @@
             </p>
 
 
-            <li class="countries">
-                <%= link_to root_path do %>
-                    <img class="flags" src="assets/images/romanianflag.png"><br>Romania, city
-                <% end %>
+          <ul>
+            <li class="countryRom">
+                <%= image_tag('romanianflag', size: '320x200') %>
             </li>
+          </ul>
           <!--
         <div class="row" id="main">
             <ul>

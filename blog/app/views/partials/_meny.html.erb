@@ -1,29 +1,24 @@
 <!-- Navigation menu -->
 <aside class="hidden-xs hidden-sm col-md-2 col-lg-2">
-    <img src="/assets/logga.png" id="logo" width="13%">
+  <%= image_tag('logga', size: '230x223') %>
     <ul class="menulist">
         <li class="publicmenu">
-        <%= link_to root_path do %>
-        	<img class="icons" src="assets/houseicon.png">Start
-        <% end %>
+          <%= image_tag('houseicon', :class => 'menyImage') %> <%= link_to 'Start', menu_index_path %>
         </li>
         <li class="publicmenu">
-        <%= link_to posts_path do %>
-        	<img class="icons" src="assets/posticon.png">Posts
-        <% end %>
+          <%= image_tag('posticon', :class => 'menyImage') %> <%= link_to 'Posts', posts_path %>
         </li>
+
         <li class="publicmenu">
-        <%= link_to menu_countries_path do %>
-        	<img class="icons" src="assets/earthicon.png">Countries
-        <% end %></li>
+          <%= image_tag('earthicon', :class => 'menyImage') %> <%= link_to 'Countries', menu_countries_path %>
+        </li>
+
         <li class="publicmenu">
-        <%= link_to root_path do %>
-        	<img class="icons" src="assets/eventicon.png">Events
-        <% end %></li>
+          <%= image_tag('eventicon', :class => 'menyImage')%>
+        </li>
+
         <li class="publicmenu">
-        <%= link_to menu_about_path do %>
-        	<img class="icons" src="assets/abouticon.png">About
-        <% end %>
+					<%= image_tag('abouticon', :class => 'menyImage')%> <%= link_to 'About', menu_about_path %>
         </li>  
 
         <!-- Menuoptions for a logged in user -->

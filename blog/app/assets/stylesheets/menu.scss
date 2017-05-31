@@ -41,3 +41,31 @@
   margin-top: -150px;
   margin-bottom: 100px;
 }
+
+#countryRom{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -150px;
+  margin-bottom: 100px;
+}
+
+/*===================================================
+=================_meny.html.erb======================
+====================================================*/
+
+.menyEntry{
+  font-size: 30px;
+}
+
+.menyImage{
+  float: left;
+  display: block;
+}
+
+.publicmenu{
+  margin-left: 40px;
+}
+
+.publicmenu:hover{
+  transition: 1s;
+}
