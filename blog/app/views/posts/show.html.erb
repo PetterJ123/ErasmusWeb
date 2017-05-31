@@ -27,17 +27,19 @@
 
         <div class="col-md-13" id="postContainer">
           <div id="textContainer">
-            <p>
-            <p id="postHeader"><%= @post.head %></p>
-            </p>
 
-            <p id="contentCont">
-            <p id="post"><%= @post.content %></p>
-            </p>
+            <p id="postHeader"><%= @post.head %></p>
+
+            <p id="postContent"><%= @post.content %></p>
+
+            <% if @post.image.exists? %>
+              <%= image_tag @post.image.url(:large) %>
+            <% end %>
+
           </div>
           <p id="author">
             <strong>Author: </strong>
-    				<%= @post.user.username %>
+          <%= @post.user.username %>
           </p>
         </div>
 

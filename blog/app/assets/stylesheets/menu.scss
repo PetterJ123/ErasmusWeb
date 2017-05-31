@@ -20,3 +20,24 @@
 .mainCont{
   width: 100%;
 }
+
+#countrySwe{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -150px;
+  margin-bottom: 100px;
+}
+
+#countryTur{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -150px;
+  margin-bottom: 100px;
+}
+
+#countryCz{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -150px;
+  margin-bottom: 100px;
+}

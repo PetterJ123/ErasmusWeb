@@ -23,7 +23,7 @@
   
       <!-- main content id="main" -->
         <div>
-          <h3 style="margin-left: 10px; ">Sweden</h3>
+          <h3>Sweden</h3>
             <p class="leftText">Laborum de summis, do arbitror philosophari. Admodum eram quorum fabulas esse,
                 sunt admodum iudicem, se elit cohaerescant, litteris aute tempor incurreret,
                 cupidatat eram consequat e ne o imitarentur, ad tamen amet quis mentitum, magna
@@ -34,15 +34,13 @@
                 philosophari. Admodum eram quorum fabulas esse,
             </p>
 
-            <ul>
+            <ul id="countrySwe">
               <li class="countries">
                   <%= link_to root_path do %>
                       <img class="flags" src="assets/images/swedishflag.png"><br>Sweden, Umeå
                   <% end %>
               </li>
             </ul>
-
-            <br><hr style="height: 5px; color: black;">
 
             <h3 class="col-md-offset-11">Turkey</h3>
             <p class="rightText col-md-offset-7">
@@ -54,16 +52,15 @@
                 dolore litteris laboris. A ad legam nulla varias.Laborum de summis, do arbitror
                 philosophari. Admodum eram quorum fabulas esse,
             </p>
-            <ul>
+            <ul id="countryTur">
               <li class="countries">
                   <%= link_to root_path do %>
                       <img class="flags" src="assets/images/turkishflag.png"><br>Turkey, Corum
                   <% end %>
+              </li>
             </ul>
 
-            <br><hr style="height: 5px; color: black;">
-
-            <h3 style="margin-left: 10px;">Czech</h3>
+            <h3>Czech</h3>
             <p class="leftText">
                 sunt admodum iudicem, se elit cohaerescant, litteris aute tempor incurreret,
                 cupidatat eram consequat e ne o imitarentur, ad tamen amet quis mentitum, magna
@@ -80,7 +77,7 @@
                 dolore litteris laboris. A ad legam nulla varias.
             </p>
 
-            <ul>
+            <ul id="countryCz">
               <li class="countries">
                   <%= link_to root_path do %>
                       <img class="flags" src="assets/images/czechflag.png"><br>Czech,city
@@ -88,7 +85,7 @@
               </li>
             </ul>
 
-            <br><hr style="height: 5px; color: black;">
+            <hr>
 
             <h3 class="col-md-offset-10">Romania</h3>
             <p class="rightText col-md-offset-7">
@@ -101,20 +98,20 @@
                 philosophari. Admodum eram quorum fabulas esse,
             </p>
 
-            <!--
+
             <li class="countries">
                 <%= link_to root_path do %>
                     <img class="flags" src="assets/images/romanianflag.png"><br>Romania, city
                 <% end %>
             </li>
-
+          <!--
         <div class="row" id="main">
             <ul>
 
                 <li class="countries">
-                    <%= link_to root_path do %>
+                    <%# link_to root_path do %>
                         <img class="flags" src="assets/images/turkishflag.png"><br>Turkey, Izmir
-                    <% end %>
+                    <%# end %>
                 </li>
 
 

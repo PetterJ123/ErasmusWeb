@@ -19,6 +19,22 @@
   background-color: #CACF95;
 }
 
+#postHeader{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#postContent{
+  margin-top: 30px;
+}
+
+#author{
+  margin-top: 30px;
+}
+/*==================================================
+====================index.html.erb==================
+====================================================*/
+
 #newPost{
   font-size: 1.3em;
 }

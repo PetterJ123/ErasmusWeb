@@ -47,9 +47,9 @@ some user made link interaction.
                 <% else %>
                     <div id="Sign up"><%= link_to "Sign Up", new_user_registration_path %></div>
                     <div id="Sign in"><%= link_to "Sign In", new_user_session_path %></div>
-                <% end %> 
-            </div>    
-            <%= yield %>
+                <% end %>
+            </div>
+          <%= yield %>
         </div>
 
         <!-- Login sessions for small screens -->
