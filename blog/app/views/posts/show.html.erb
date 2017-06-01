@@ -47,6 +47,11 @@
     			<%= link_to 'Edit', edit_post_path(@post) %> |
     			<%= link_to 'Back', posts_path %>
         </div>
+
+        <div id="commentSection">
+          <%= render 'partials/comment' %>
+        </div>
+
     	</div>
     <%= render 'partials/footer' %>
   </div> 

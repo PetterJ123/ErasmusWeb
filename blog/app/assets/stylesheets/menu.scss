@@ -60,6 +60,7 @@
 .menyImage{
   float: left;
   display: block;
+  margin: auto;
 }
 
 .publicmenu{
@@ -68,4 +69,8 @@
 
 .publicmenu:hover{
   transition: 1s;
+}
+
+.menyLink{
+  display: flex;
 }

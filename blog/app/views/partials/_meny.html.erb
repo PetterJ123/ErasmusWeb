@@ -3,14 +3,14 @@
   <%= image_tag('logga', size: '230x223') %>
     <ul class="menulist">
         <li class="publicmenu">
-          <%= image_tag('houseicon', :class => 'menyImage') %> <%= link_to 'Start', menu_index_path %>
+          <%= image_tag('houseicon', :class => 'menyImage') %> <%= link_to 'Start', menu_index_path, :class => 'menyLink' %>
         </li>
         <li class="publicmenu">
-          <%= image_tag('posticon', :class => 'menyImage') %> <%= link_to 'Posts', posts_path %>
+          <%= image_tag('posticon', :class => 'menyImage') %> <%= link_to 'Posts', posts_path, :class => 'menyLink' %>
         </li>
 
         <li class="publicmenu">
-          <%= image_tag('earthicon', :class => 'menyImage') %> <%= link_to 'Countries', menu_countries_path %>
+          <%= image_tag('earthicon', :class => 'menyImage') %> <%= link_to 'Countries', menu_countries_path, :class => 'menyLink' %>
         </li>
 
         <li class="publicmenu">
@@ -18,40 +18,33 @@
         </li>
 
         <li class="publicmenu">
-					<%= image_tag('abouticon', :class => 'menyImage')%> <%= link_to 'About', menu_about_path %>
+					<%= image_tag('abouticon', :class => 'menyImage')%> <%= link_to 'About', menu_about_path, :class => 'menyLink' %>
         </li>  
 
         <!-- Menuoptions for a logged in user -->
 
         <% if user_signed_in? %>
         	<div id="inloggedmenu">
-	        	<p id="mail"><img id="profilepic" src="assets/profileex.png"><%= current_user.email %></p>
-	        	 <li class="privatemenu">
-	        		<%= link_to menu_profile_path do %>
-	        		<img class="icons" src="assets/houseicon.png">Home
-	        		<% end %>
-	        	</li>
-	        	<li class="privatemenu"> 
-	        		<%= link_to menu_profile_path do %>
-	        		<img class="icons" src="assets/lettericon.png">Inbox
-	        		<% end %>
-	        	</li>
-	        	<li class="privatemenu">
-	        		<%= link_to menu_profile_path do %>
-	        		<img class="icons" src="assets/flagicon.png">Notifications
-	        		<% end %>
-	        	</li>
-	        	<li class="privatemenu">
-	        		<%= link_to menu_profile_path do %>
-	        		<img class="icons" src="assets/eventicon.png">My event
-	        		<% end %>
-	        	</li>
-	        	<li class="privatemenu">
-	        		<%= link_to menu_profile_path do %>
-	        		<img class="icons" src="assets/wheelicon.png">Settings
-	        		<% end %>
-	        	</li>
-	        </div>	
+	        	<p id="mail"><%= image_tag('profileex') %></p>
+            <li class="privatemenu">
+              <%= image_tag('houseicon', :class => 'menyImage') %> <%= link_to 'Start', menu_index_path %>
+            </li>
+            <li class="privatemenu">
+              <%= image_tag('posticon', :class => 'menyImage') %> <%= link_to 'Posts', posts_path %>
+            </li>
+
+            <li class="privatemenu">
+              <%= image_tag('earthicon', :class => 'menyImage') %> <%= link_to 'Countries', menu_countries_path %>
+            </li>
+
+            <li class="privatemenu">
+              <%= image_tag('eventicon', :class => 'menyImage')%>
+            </li>
+
+            <li class="privatemenu">
+              <%= image_tag('abouticon', :class => 'menyImage')%> <%= link_to 'About', menu_about_path %>
+            </li>
+          </div>
         <% end %>          
     </ul>
 </aside>
